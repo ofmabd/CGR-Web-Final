@@ -1,3 +1,14 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
+
+.brand-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+
+  background: linear-gradient(90deg, #D4A017 0%, #B08AE6 45%, #6E5ACD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

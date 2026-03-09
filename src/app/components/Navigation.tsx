@@ -1,10 +1,21 @@
+// Import Link for navigation between pages
 import { Link } from "react-router";
+
+// React hook for controlling state (used for mobile menu toggle)
 import { useState } from "react";
+
+// Icons for the mobile menu button
 import { Menu, X } from "lucide-react";
 
+// Import the logo image
+import logo from "../../assets/logo-icon.png";
+
 export function Navigation() {
+
+  // State that controls whether the mobile menu is open
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Navigation links used in both desktop and mobile menus
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "HR Services", path: "/hr-services" },
@@ -15,32 +26,62 @@ export function Navigation() {
   ];
 
   return (
-    <nav style={{ backgroundColor: "var(--navy)" }} className="sticky top-0 z-50 shadow-md">
+    // Main navbar container
+    <nav
+      style={{ backgroundColor: "var(--navy)" }}
+      className="sticky top-0 z-50 shadow-md"
+    >
+
+      {/* Container keeps the navbar aligned with the page content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Navbar row */}
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
+
+          {/* ================= LOGO + BRAND ================= */}
+          {/* Clicking logo returns user to homepage */}
+          <Link to="/" className="flex items-center gap-3 min-w-max">
+
+            {/* Company logo */}
+            <img
+              src={logo}
+              alt="CGR Logo"
+              className="h-12 w-auto"
+            />
+
+            {/* Brand text */}
             <div className="flex flex-col">
-              <span className="text-white text-xl sm:text-2xl" style={{ fontWeight: 700 }}>
+
+              {/* Main company name */}
+              <span className="brand-text whitespace-nowrap">
                 Cherrie Give Resultz
               </span>
+
+              {/* Subtitle / tagline */}
               <span className="text-[var(--gold)] text-xs sm:text-sm tracking-wider">
                 STRATEGIC HR SOLUTIONS
               </span>
+
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
+
+          {/* ================= DESKTOP NAVIGATION ================= */}
+          {/* Hidden on smaller screens */}
+          <div className="hidden lg:flex items-center gap-10 ml-12">
+
+            {/* Map through navLinks array to generate links */}
+              {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className="text-white hover:text-[var(--gold)] transition-colors text-center"
-              >
+                className="flex items-center justify-center text-white text-sm font-medium tracking-wide px-4 py-2 rounded-md hover:bg-white/10 hover:text-[var(--gold)] transition-all duration-300 text-center"
+               >
                 {link.name}
               </Link>
             ))}
+
+            {/* CTA Button */}
             <Link
               to="/contact"
               className="px-6 py-2.5 rounded-md transition-all hover:opacity-90 hover:shadow-lg text-center"
@@ -48,21 +89,29 @@ export function Navigation() {
             >
               Schedule a Consultation
             </Link>
+
           </div>
 
-          {/* Mobile Menu Button */}
+
+          {/* ================= MOBILE MENU BUTTON ================= */}
+          {/* Only visible on small screens */}
           <button
             className="lg:hidden text-white p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
+            {/* Show X when open, Menu icon when closed */}
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+
         </div>
 
-        {/* Mobile Menu */}
+
+        {/* ================= MOBILE MENU ================= */}
         {mobileMenuOpen && (
           <div className="lg:hidden pb-4">
+
             <div className="flex flex-col gap-4">
+
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -73,6 +122,8 @@ export function Navigation() {
                   {link.name}
                 </Link>
               ))}
+
+              {/* Mobile CTA button */}
               <Link
                 to="/contact"
                 className="px-6 py-2.5 rounded-md transition-all hover:opacity-90 text-center"
@@ -81,10 +132,14 @@ export function Navigation() {
               >
                 Schedule a Consultation
               </Link>
+
             </div>
+
           </div>
         )}
+
       </div>
+
     </nav>
   );
 }
