@@ -59,7 +59,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/hr-services"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-md transition-all hover:opacity-90 hover:shadow-xl"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-md transition-all hover:opacity-70 hover:shadow-xl"
                 style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
               >
                 Explore HR Services

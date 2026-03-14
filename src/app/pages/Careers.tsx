@@ -267,7 +267,7 @@ export default function Careers() {
                 <button
                   key={dept}
                   onClick={() => setSelectedDepartment(dept)}
-                  className="px-6 py-2 rounded-full transition-all"
+                  className="px-6 py-2 rounded-full transition-all cursor-pointer"
                   style={{
                     backgroundColor: selectedDepartment === dept ? "var(--gold)" : "white",
                     color: selectedDepartment === dept ? "var(--navy)" : "#4b5563",

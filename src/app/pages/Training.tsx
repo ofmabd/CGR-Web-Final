@@ -188,7 +188,7 @@ export default function Training() {
                     <Link
                       to="/contact"
                       className="inline-flex items-center px-6 py-3 rounded-md border-2 transition-all hover:bg-[var(--navy)] hover:text-white"
-                      style={{ borderColor: "var(--navy)", color: "var(--navy)" }}
+                      // style={{ borderColor: "var(--navy)", color: "var(--navy)" }}
                     >
                       Learn More
                       <ChevronRight className="ml-2" size={18} />
@@ -246,7 +246,7 @@ export default function Training() {
                     </span>
                     <Link
                       to="/contact"
-                      className="px-6 py-2 rounded-md transition-all hover:opacity-90"
+                      className="px-6 py-2 rounded-md transition-all hover:opacity-70"
                       style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
                     >
                       Register
@@ -263,15 +263,15 @@ export default function Training() {
       <section className="py-20" style={{ backgroundColor: "var(--navy)" }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Download size={64} className="mx-auto mb-6" style={{ color: "var(--gold)" }} />
-          <h2 className="text-3xl md:text-4xl text-white mb-6" style={{ fontWeight: 700 }}>
+          <h2 className="text-3xl md:text-4xl text-white mb-6 "  style={{ fontWeight: 700 }}>
             Download Our Complete Training Catalog
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Get detailed information about all our training programs, schedules, and pricing.
           </p>
           <button
-            className="inline-flex items-center px-8 py-4 rounded-md transition-all hover:opacity-90 hover:shadow-xl"
-            style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
+            className="inline-flex items-center px-8 py-4 rounded-md transition-all hover:opacity-90 hover:shadow-xl cursor-pointer"
+            style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }} 
           >
             <Download className="mr-2" size={20} />
             Download Program Guide (PDF)
