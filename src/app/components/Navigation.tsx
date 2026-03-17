@@ -19,11 +19,13 @@ export function Navigation() {
   // Navigation links used in both desktop and mobile menus
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "HR Services", path: "/hr-services" },
-    { name: "Training & Development", path: "/training" },
-    { name: "Careers", path: "/careers" },
-    { name: "Resource Hub", path: "/resources" },
+    { name: "About", path: "/About" },
+    { name: "Services", path: "/Services" },
+    // { name: "Training & Development", path: "/training" },
+    { name: "Jobs", path: "/Jobs" },
     { name: "Contact", path: "/contact" },
+    { name: "Resource Hub", path: "/resources" },
+    { name: "Login", path: "/Login" },
   ];
 
   return (
@@ -84,13 +86,13 @@ export function Navigation() {
             ))}
 
             {/* CTA Button */}
-            <Link
+            {/* <Link
               to="/contact"
               className="px-2 py-1 rounded-md transition-all hover:opacity-90 hover:shadow-lg text-center"
               style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
              >
               Schedule a Consultation
-            </Link>
+            </Link> */}
           </div>
 
 
