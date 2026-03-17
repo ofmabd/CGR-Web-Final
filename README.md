@@ -1,5 +1,4 @@
- 
-  # CGR Web Final
+# CGR Web Final
 
 Frontend website for **Cherrie Give Resultz (CGR)** HR consulting services.
 
@@ -10,11 +9,11 @@ The goal is to provide a scalable and maintainable structure for building the CG
 
 ## Tech Stack
 
-* React
-* TypeScript
-* Vite
-* Tailwind CSS
-* React Router
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
 
 ---
 
@@ -47,11 +46,11 @@ src/
 
 ### Key Files
 
-* `Home.tsx` → Homepage layout and hero section
-* `Navigation.tsx` → Top navigation bar
-* `Footer.tsx` → Website footer
-* `routes.ts` → Page routing configuration
-* `styles/` → Global styling and Tailwind configuration
+- `Home.tsx` → Homepage layout and hero section
+- `Navigation.tsx` → Top navigation bar
+- `Footer.tsx` → Website footer
+- `routes.ts` → Page routing configuration
+- `styles/` → Global styling and Tailwind configuration
 
 ---
 
@@ -91,10 +90,10 @@ http://localhost:5173
 
 ## Development Notes
 
-* The site uses **component-based architecture**.
-* UI components are located in `src/app/components`.
-* Page-level layouts are in `src/app/pages`.
-* Styling is handled primarily through **Tailwind utility classes**.
+- The site uses **component-based architecture**.
+- UI components are located in `src/app/components`.
+- Page-level layouts are in `src/app/pages`.
+- Styling is handled primarily through **Tailwind utility classes**.
 
 ---
 
@@ -131,12 +130,14 @@ git push origin feature/your-feature-name
 
 ## Notes
 
-* Do not commit the `node_modules` folder.
-* Dependencies are managed through `package.json`.
-* Run `npm install` after pulling new changes.
+- Do not commit the `node_modules` folder.
+- Dependencies are managed through `package.json`.
+- Run `npm install` after pulling new changes.
 
 ---
 
 ## About
 
 This is a code bundle for Website Guidelines Upload. The original project is available at https://www.figma.com/design/iR2sHNtkxHxZfRh2RT3buN/Website-Guidelines-Upload.
+
+## Test commit by Benjamin

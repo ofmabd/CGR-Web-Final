@@ -1,5 +1,6 @@
 // Import Link for navigation between pages
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
+// import { NavLink, Link } from "react-router-dom";
 
 // React hook for controlling state (used for mobile menu toggle)
 import { useState } from "react";
@@ -18,11 +19,13 @@ export function Navigation() {
   // Navigation links used in both desktop and mobile menus
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "HR Services", path: "/hr-services" },
-    { name: "Training & Development", path: "/training" },
-    { name: "Careers", path: "/careers" },
-    { name: "Resource Hub", path: "/resources" },
+    { name: "About", path: "/About" },
+    { name: "Services", path: "/Services" },
+    // { name: "Training & Development", path: "/training" },
+    { name: "Jobs", path: "/Jobs" },
     { name: "Contact", path: "/contact" },
+    { name: "Resource Hub", path: "/resources" },
+    { name: "Login", path: "/Login" },
   ];
 
   return (
@@ -36,11 +39,12 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Navbar row */}
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-18">
 
           {/* ================= LOGO + BRAND ================= */}
           {/* Clicking logo returns user to homepage */}
           <Link to="/" className="flex items-center gap-3 min-w-max">
+           
 
             {/* Company logo */}
             <img
@@ -68,7 +72,7 @@ export function Navigation() {
 
           {/* ================= DESKTOP NAVIGATION ================= */}
           {/* Hidden on smaller screens */}
-          <div className="hidden lg:flex items-center gap-10 ml-12">
+          <div className="hidden lg:flex items-center gap-4 ml-12">
 
             {/* Map through navLinks array to generate links */}
               {navLinks.map((link) => (
@@ -82,14 +86,13 @@ export function Navigation() {
             ))}
 
             {/* CTA Button */}
-            <Link
+            {/* <Link
               to="/contact"
-              className="px-6 py-2.5 rounded-md transition-all hover:opacity-90 hover:shadow-lg text-center"
+              className="px-2 py-1 rounded-md transition-all hover:opacity-90 hover:shadow-lg text-center"
               style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
-            >
+             >
               Schedule a Consultation
-            </Link>
-
+            </Link> */}
           </div>
 
 

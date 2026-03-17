@@ -132,13 +132,13 @@ export default function ResourceHub() {
 
             {/* Search Bar */}
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 " size={20} />
               <input
                 type="text"
                 placeholder="Search resources..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900"
+                className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 border-2 border-white placeholder-white text-white"
               />
             </div>
           </div>
@@ -181,7 +181,7 @@ export default function ResourceHub() {
               return (
                 <div
                   key={index}
-                  className="p-6 rounded-lg border-2 bg-white hover:border-[var(--gold)] transition-all group cursor-pointer"
+                  className="p-6 rounded-lg border-2 bg-white hover:border-[var(--gold)] transition-all group "
                   style={{ borderColor: "#e5e7eb" }}
                 >
                   <div className="flex items-start gap-4 mb-4">
@@ -202,7 +202,7 @@ export default function ResourceHub() {
                   </div>
                   <p className="text-gray-600 mb-4">{resource.description}</p>
                   <button
-                    className="inline-flex items-center gap-2 transition-colors group-hover:text-[var(--gold)]"
+                    className="inline-flex items-center gap-2 transition-colors group-hover:text-[var(--gold)] cursor-pointer"
                     style={{ color: "var(--navy)" }}
                   >
                     <Download size={18} />
@@ -275,7 +275,7 @@ export default function ResourceHub() {
               <p className="text-gray-600 mb-4">
                 Step-by-step guides for common supervisory tasks and challenges
               </p>
-              <button className="text-sm inline-flex items-center gap-2" style={{ color: "var(--gold)" }}>
+              <button className="text-sm inline-flex items-center gap-2 cursor-pointer" style={{ color: "var(--gold) " }}>
                 Browse Guides <ChevronRight size={16} />
               </button>
             </div>
@@ -288,7 +288,7 @@ export default function ResourceHub() {
               <p className="text-gray-600 mb-4">
                 Ready-to-use templates for documentation and employee management
               </p>
-              <button className="text-sm inline-flex items-center gap-2" style={{ color: "var(--gold)" }}>
+              <button className="text-sm inline-flex items-center gap-2 cursor-pointer" style={{ color: "var(--gold)" }}>
                 Download Templates <ChevronRight size={16} />
               </button>
             </div>
@@ -301,7 +301,7 @@ export default function ResourceHub() {
               <p className="text-gray-600 mb-4">
                 Clear explanations of key HR policies and compliance requirements
               </p>
-              <button className="text-sm inline-flex items-center gap-2" style={{ color: "var(--gold)" }}>
+              <button className="text-sm inline-flex items-center gap-2 cursor-pointer" style={{ color: "var(--gold)" }}>
                 View Policies <ChevronRight size={16} />
               </button>
             </div>

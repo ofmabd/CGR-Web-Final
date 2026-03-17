@@ -12,3 +12,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+*{
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
