@@ -49,8 +49,8 @@ export default function Signup() {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Navigation />
 
-      <section className="flex-grow flex items-center justify-center py-20 px-4">
-        <div className="w-full max-w-md bg-white shadow-xl rounded-lg p-10">
+      <section style={{ backgroundColor: "var(--chart-3)" }} className="flex-grow flex items-center justify-center py-20 px-4">
+        <div className="w-full max-w-2xl bg-white shadow-xl rounded-lg p-10">
           <div className="text-center mb-8">
             <h1
               className="text-3xl mb-2"
@@ -117,6 +117,20 @@ export default function Signup() {
                   placeholder="example@email.com"
                 />
               </div>
+            </div>
+
+            {/* Resume upload */}
+            <div className="mb-4">
+              <label className="block text-sm font-medium mb-2">
+                Upload Resume 
+              </label>
+              <input 
+              type="file"
+              accept=".pdf, .doc, .docx"
+              className="block w-full  text-sm text-gray-500 
+              file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-1
+              file:text-sm hover:file:bg-[var(--chart-5)] hover:text-black"
+               />
             </div>
 
             {/* Password */}

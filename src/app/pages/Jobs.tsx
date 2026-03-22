@@ -117,10 +117,23 @@ export default function Careers() {
     },
   ];
 
-  const filteredJobs =
-    selectedDepartment === "All"
-      ? jobs
-      : jobs.filter((job) => job.department === selectedDepartment);
+  // ✅ SEARCH + FILTER (ONLY ADDITION)
+  const filteredJobs = jobs.filter((job) => {
+    const query = searchQuery.toLowerCase();
+
+    const matchesDepartment =
+      selectedDepartment === "All" || job.department === selectedDepartment;
+
+    const matchesSearch =
+      query === "" ||
+      job.title.toLowerCase().includes(query) ||
+      job.location.toLowerCase().includes(query) ||
+      job.type.toLowerCase().includes(query) ||
+      job.salary.toLowerCase().includes(query) ||
+      job.description.toLowerCase().includes(query);
+
+    return matchesDepartment && matchesSearch;
+  });
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -147,6 +160,18 @@ export default function Careers() {
             </p>
           </div>
         </div>
+        <div className="pt-20 text-right">
+            <span className="text-white">New Here? </span>
+            <Link
+              to="/NewHirePortal"
+              className="inline-flex items-center px-6 py-3 rounded-md  transition-all hover:opacity-60 underline"
+              style={{
+                color: "var(--gold)",
+              }}
+            >
+              Join Onboarding Session
+            </Link>
+          </div>
       </section>
 
       {/* Open Positions */}
@@ -185,17 +210,15 @@ export default function Careers() {
           </div>
 
           {/* Job Search Bar */}
-          <div className="relative ml-18">
-            <Search
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 "
-              size={20}
-            />
+          <div className="relative max-w-xl mx-auto mb-8">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+
             <input
               type="text"
               placeholder="Search jobs..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-235 pl-12 pr-4 py-4 my-4  rounded-lg text-gray-900 border-2 border-gray placeholder-black text-black focus:outline-none focus:ring-2 focus:ring-[var(--gold)] focus:border-transparent transition-all"
+              className="w-full pl-12 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
             />
           </div>
 
@@ -214,6 +237,7 @@ export default function Careers() {
                     >
                       {job.title}
                     </h3>
+
                     <div className="flex flex-wrap gap-4 text-sm mb-3">
                       <div className="flex items-center gap-2 text-gray-600">
                         <MapPin size={16} style={{ color: "var(--purple)" }} />
@@ -266,6 +290,15 @@ export default function Careers() {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="text-center mt-12">
+          <Link
+            to="/"
+            className="px-6 py-3 bg-[var(--navy)] text-white rounded-md"
+          >
+            View My Applications
+          </Link>
         </div>
       </section>
 

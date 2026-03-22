@@ -2,9 +2,12 @@ import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router";
 
 export default function Contact() {
-  const [formType, setFormType] = useState<"consultation" | "hr-support" | "general">("consultation");
+  const [formType, setFormType] = useState<
+    "consultation" | "hr-support" | "general"
+  >("consultation");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,7 +35,11 @@ export default function Contact() {
     });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -52,12 +59,28 @@ export default function Contact() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-white mb-6" style={{ fontWeight: 700, lineHeight: 1.2 }}>
+            <h1
+              className="text-4xl md:text-5xl lg:text-6xl text-white mb-6"
+              style={{ fontWeight: 700, lineHeight: 1.2 }}
+            >
               Get In Touch
             </h1>
             <p className="text-xl text-gray-200">
-              We're here to support your HR needs. Reach out for consultations, support requests, or general inquiries.
+              We're here to support your HR needs. Reach out for consultations,
+              support requests, or general inquiries.
             </p>
+          </div>
+          <div className="pt-20 text-right">
+            <span className="text-white">New Here? </span>
+            <Link
+              to="/NewHirePortal"
+              className="inline-flex items-center px-6 py-3 rounded-md  transition-all hover:opacity-60 underline"
+              style={{
+                color: "var(--gold)",
+              }}
+            >
+              Join Onboarding Session
+            </Link>
           </div>
         </div>
       </section>
@@ -74,33 +97,54 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "var(--purple)", color: "white" }}>
+                  <div
+                    className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: "var(--purple)", color: "white" }}
+                  >
                     <Mail size={24} />
                   </div>
                   <div>
-                    <h3 className="mb-1" style={{ color: "var(--navy)" }}>Email</h3>
-                    <p className="text-gray-600">contact@cherriegiveresultz.com</p>
-                    <p className="text-gray-600">hr-support@cherriegiveresultz.com</p>
+                    <h3 className="mb-1" style={{ color: "var(--navy)" }}>
+                      Email
+                    </h3>
+                    <p className="text-gray-600">
+                      contact@cherriegiveresultz.com
+                    </p>
+                    <p className="text-gray-600">
+                      hr-support@cherriegiveresultz.com
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "var(--purple)", color: "white" }}>
+                  <div
+                    className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: "var(--purple)", color: "white" }}
+                  >
                     <Phone size={24} />
                   </div>
                   <div>
-                    <h3 className="mb-1" style={{ color: "var(--navy)" }}>Phone</h3>
+                    <h3 className="mb-1" style={{ color: "var(--navy)" }}>
+                      Phone
+                    </h3>
                     <p className="text-gray-600">(555) 123-4567</p>
-                    <p className="text-sm text-gray-500">Mon-Fri, 9am-5pm EST</p>
+                    <p className="text-sm text-gray-500">
+                      Mon-Fri, 9am-5pm EST
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "var(--purple)", color: "white" }}>
+                  <div
+                    className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: "var(--purple)", color: "white" }}
+                  >
                     <MapPin size={24} />
                   </div>
                   <div>
-                    <h3 className="mb-1" style={{ color: "var(--navy)" }}>Office</h3>
+                    <h3 className="mb-1" style={{ color: "var(--navy)" }}>
+                      Office
+                    </h3>
                     <p className="text-gray-600">123 Business Plaza</p>
                     <p className="text-gray-600">Suite 456</p>
                     <p className="text-gray-600">Professional City, ST 12345</p>
@@ -108,7 +152,10 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="mt-8 p-6 rounded-lg" style={{ backgroundColor: "var(--navy)" }}>
+              <div
+                className="mt-8 p-6 rounded-lg"
+                style={{ backgroundColor: "var(--navy)" }}
+              >
                 <h3 className="text-xl text-white mb-3">Office Hours</h3>
                 <div className="space-y-2 text-gray-300">
                   <div className="flex justify-between">
@@ -140,9 +187,11 @@ export default function Contact() {
                     onClick={() => setFormType("consultation")}
                     className="px-6 py-2 rounded-full transition-all"
                     style={{
-                      backgroundColor: formType === "consultation" ? "var(--gold)" : "white",
-                      color: formType === "consultation" ? "var(--navy)" : "#4b5563",
-                      border: `2px solid ${formType === "consultation" ? "var(--gold)" : "#e5e7eb"}`
+                      backgroundColor:
+                        formType === "consultation" ? "var(--gold)" : "white",
+                      color:
+                        formType === "consultation" ? "var(--navy)" : "#4b5563",
+                      border: `2px solid ${formType === "consultation" ? "var(--gold)" : "#e5e7eb"}`,
                     }}
                   >
                     Book a Consultation
@@ -151,9 +200,11 @@ export default function Contact() {
                     onClick={() => setFormType("hr-support")}
                     className="px-6 py-2 rounded-full transition-all"
                     style={{
-                      backgroundColor: formType === "hr-support" ? "var(--gold)" : "white",
-                      color: formType === "hr-support" ? "var(--navy)" : "#4b5563",
-                      border: `2px solid ${formType === "hr-support" ? "var(--gold)" : "#e5e7eb"}`
+                      backgroundColor:
+                        formType === "hr-support" ? "var(--gold)" : "white",
+                      color:
+                        formType === "hr-support" ? "var(--navy)" : "#4b5563",
+                      border: `2px solid ${formType === "hr-support" ? "var(--gold)" : "#e5e7eb"}`,
                     }}
                   >
                     HR Support Request
@@ -162,9 +213,10 @@ export default function Contact() {
                     onClick={() => setFormType("general")}
                     className="px-6 py-2 rounded-full transition-all"
                     style={{
-                      backgroundColor: formType === "general" ? "var(--gold)" : "white",
+                      backgroundColor:
+                        formType === "general" ? "var(--gold)" : "white",
                       color: formType === "general" ? "var(--navy)" : "#4b5563",
-                      border: `2px solid ${formType === "general" ? "var(--gold)" : "#e5e7eb"}`
+                      border: `2px solid ${formType === "general" ? "var(--gold)" : "#e5e7eb"}`,
                     }}
                   >
                     General Inquiry
@@ -174,7 +226,11 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block mb-2" style={{ color: "var(--navy)" }}>
+                      <label
+                        htmlFor="name"
+                        className="block mb-2"
+                        style={{ color: "var(--navy)" }}
+                      >
                         Full Name *
                       </label>
                       <input
@@ -189,7 +245,11 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block mb-2" style={{ color: "var(--navy)" }}>
+                      <label
+                        htmlFor="email"
+                        className="block mb-2"
+                        style={{ color: "var(--navy)" }}
+                      >
                         Email Address *
                       </label>
                       <input
@@ -206,7 +266,11 @@ export default function Contact() {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="phone" className="block mb-2" style={{ color: "var(--navy)" }}>
+                      <label
+                        htmlFor="phone"
+                        className="block mb-2"
+                        style={{ color: "var(--navy)" }}
+                      >
                         Phone Number
                       </label>
                       <input
@@ -220,7 +284,11 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label htmlFor="organization" className="block mb-2" style={{ color: "var(--navy)" }}>
+                      <label
+                        htmlFor="organization"
+                        className="block mb-2"
+                        style={{ color: "var(--navy)" }}
+                      >
                         Organization
                       </label>
                       <input
@@ -236,7 +304,11 @@ export default function Contact() {
 
                   {formType === "consultation" && (
                     <div>
-                      <label htmlFor="serviceInterest" className="block mb-2" style={{ color: "var(--navy)" }}>
+                      <label
+                        htmlFor="serviceInterest"
+                        className="block mb-2"
+                        style={{ color: "var(--navy)" }}
+                      >
                         Service Interest
                       </label>
                       <select
@@ -247,11 +319,21 @@ export default function Contact() {
                         className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[var(--gold)] focus:outline-none transition-colors"
                       >
                         <option value="">Select a service...</option>
-                        <option value="employee-relations">Employee Relations & Labor Relations</option>
-                        <option value="performance-management">Performance Management Systems</option>
-                        <option value="supervisor-coaching">Supervisor Coaching & Development</option>
-                        <option value="org-development">Organizational Development</option>
-                        <option value="policy-compliance">HR Policy & Compliance Consulting</option>
+                        <option value="employee-relations">
+                          Employee Relations & Labor Relations
+                        </option>
+                        <option value="performance-management">
+                          Performance Management Systems
+                        </option>
+                        <option value="supervisor-coaching">
+                          Supervisor Coaching & Development
+                        </option>
+                        <option value="org-development">
+                          Organizational Development
+                        </option>
+                        <option value="policy-compliance">
+                          HR Policy & Compliance Consulting
+                        </option>
                         <option value="training">Training & Development</option>
                         <option value="other">Other/Multiple Services</option>
                       </select>
@@ -260,7 +342,11 @@ export default function Contact() {
 
                   {formType === "hr-support" && (
                     <div>
-                      <label htmlFor="urgency" className="block mb-2" style={{ color: "var(--navy)" }}>
+                      <label
+                        htmlFor="urgency"
+                        className="block mb-2"
+                        style={{ color: "var(--navy)" }}
+                      >
                         Urgency Level
                       </label>
                       <select
@@ -270,15 +356,25 @@ export default function Contact() {
                         onChange={handleChange}
                         className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[var(--gold)] focus:outline-none transition-colors"
                       >
-                        <option value="normal">Normal - Response within 48 hours</option>
-                        <option value="high">High - Response within 24 hours</option>
-                        <option value="urgent">Urgent - Same day response needed</option>
+                        <option value="normal">
+                          Normal - Response within 48 hours
+                        </option>
+                        <option value="high">
+                          High - Response within 24 hours
+                        </option>
+                        <option value="urgent">
+                          Urgent - Same day response needed
+                        </option>
                       </select>
                     </div>
                   )}
 
                   <div>
-                    <label htmlFor="subject" className="block mb-2" style={{ color: "var(--navy)" }}>
+                    <label
+                      htmlFor="subject"
+                      className="block mb-2"
+                      style={{ color: "var(--navy)" }}
+                    >
                       Subject *
                     </label>
                     <input
@@ -293,7 +389,11 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block mb-2" style={{ color: "var(--navy)" }}>
+                    <label
+                      htmlFor="message"
+                      className="block mb-2"
+                      style={{ color: "var(--navy)" }}
+                    >
                       Message *
                     </label>
                     <textarea
@@ -310,7 +410,10 @@ export default function Contact() {
                   <button
                     type="submit"
                     className="w-full md:w-auto px-8 py-4 rounded-lg transition-all hover:opacity-90 hover:shadow-lg flex items-center justify-center gap-2"
-                    style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
+                    style={{
+                      backgroundColor: "var(--gold)",
+                      color: "var(--navy)",
+                    }}
                   >
                     <Send size={20} />
                     Send Message

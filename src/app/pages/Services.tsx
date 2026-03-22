@@ -9,7 +9,7 @@ import {
   Shield,
   ChevronDown,
   ChevronUp,
-  ChevronRight
+  ChevronRight,
 } from "lucide-react";
 import { Link } from "react-router";
 import { useState } from "react";
@@ -144,6 +144,18 @@ export default function HRServices() {
               protect your interests, and drive sustainable performance.
             </p>
           </div>
+        </div>
+        <div className="pt-20 text-right">
+          <span className="text-white">New Here? </span>
+          <Link
+            to="/NewHirePortal"
+            className="inline-flex items-center px-6 py-3 rounded-md  transition-all hover:opacity-60 underline"
+            style={{
+              color: "var(--gold)",
+            }}
+          >
+            Join Onboarding Session
+          </Link>
         </div>
       </section>
 

@@ -8,6 +8,8 @@ import Contact from "./pages/Contact";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import About from "./pages/About";
+import NewHirePortal from "./pages/NewHirePortal";
+
 
 export const router = createBrowserRouter([
   {
@@ -43,8 +45,12 @@ export const router = createBrowserRouter([
     Component: Contact,
   },
   {
-    path: "/About",
-    Component: About,
+      path: "/About",
+      Component: About,
+    },
+    {
+    path: "/NewHirePortal",
+    Component: NewHirePortal,
   },
   {
     path: "*",
