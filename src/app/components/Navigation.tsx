@@ -24,7 +24,7 @@ export function Navigation() {
     // { name: "Training & Development", path: "/training" },
     { name: "Jobs", path: "/Jobs" },
     { name: "Contact", path: "/contact" },
-    { name: "Resource Hub", path: "/resources" },
+    { name: "Resource", path: "/resources" },
     { name: "Login", path: "/Login" },
   ];
 

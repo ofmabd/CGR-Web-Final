@@ -41,11 +41,11 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div style={{ backgroundColor: "var(--chart-3)" }} className="min-h-screen flex flex-col bg-gray-50">
       <Navigation />
 
       <section className="flex-grow flex items-center justify-center py-20 px-4">
-        <div className="w-full max-w-md bg-white shadow-xl rounded-lg p-10">
+        <div className="w-full max-w-2xl bg-white shadow-xl rounded-lg p-10">
 
           {/* Heading */}
           <div className="text-center mb-8">

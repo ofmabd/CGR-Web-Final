@@ -1,42 +1,55 @@
+import React from "react";
 import { Link } from "react-router";
+// import image6 from '../assets/images/ImgE.png';
+// import image1 from '../assets/image1.jpg';
 import {
   Shield,
   Users,
   TrendingUp,
   Award,
   Target,
+  Search,
   Briefcase,
   BookOpen,
+  Heart,
   ChevronRight,
 } from "lucide-react";
 import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
-import { Search, Heart } from "lucide-react";
 import { useState, useEffect } from "react";
 
+import user1 from "../../assets/user1.jpg";
+import user2 from "../../assets/user2.jpg";
+import user3 from "../../assets/user3.jpg";
+// import user3 from "../assets/image3.jpg";
+
 export default function Home() {
-  const [searchQuery, setSearchQuery] = useState(""); //search import
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const testimonials = [
     {
+      
       name: "Olivia Carter",
       role: "HR Director",
-      text: "Cherrie Give Resultz helped us structure our HR systems in ways that improved leadership accountability and team performance.",
+      image: user1,
+      text: "Working with Cherrie Give Resultz delivered real, measurable impact on our hiring process. Within just a few months, we achieved a 42% reduction in time-to-hire, allowing us to secure top talent faster and stay ahead of our competitors.",
     },
     {
       name: "Michael Daniels",
       role: "Operations Manager",
+      image: user2,
       text: "Their leadership training program transformed how our supervisors manage teams and resolve workplace challenges.",
     },
     {
       name: "Aisha Bello",
       role: "Talent Development Lead",
-      text: "Professional, strategic, and practical. Their HR frameworks brought clarity and structure to our organization.",
+      image: user3,
+      text: "Partnering with Cherrie Give Resultz transformed how we manage performance. Their systems and guidance helped us streamline evaluations and improve accountability across teams. Within a short time, we saw a 30% increase in overall employee productivity. The clarity they brought to our processes made a lasting difference.",
     },
     {
       name: "Veronica Sterlin",
       role: "Head of operations",
+      image: user2,
       text: "Professional, strategic, and practical. Their HR frameworks brought clarity and structure to our organization.",
     },
   ];
@@ -53,27 +66,27 @@ export default function Home() {
 
   const solutions = [
     {
-      title: "Employee Relations & Labor Strategy",
+      title: "Talent Acquisition & Staffing",
       description:
-        "Expert guidance on complex employee relations issues and labor law compliance.",
+        "We help organizations find, attract, and hire the right talent to drive business success..",
       icon: Users,
     },
     {
-      title: "Performance Management Systems",
+      title: "HR Consulting & Compliance Audits",
       description:
-        "Structured frameworks for measuring, tracking, and improving employee performance.",
+        "We provide expert HR support and ensure compliance with labor laws..",
       icon: Target,
     },
     {
-      title: "Leadership & Supervisor Training",
+      title: "DEI & Leadership Training",
       description:
-        "Comprehensive development programs to build confident, effective leaders.",
+        "We equip teams with inclusive practices and strong leadership skills.",
       icon: Award,
     },
     {
-      title: "Organizational Development Consulting",
+      title: "Internship & Emerging Talent Pipeline",
       description:
-        "Strategic guidance to optimize organizational structure and culture.",
+        "We develop programs that attract and nurture young talent.",
       icon: Briefcase,
     },
   ];
@@ -84,7 +97,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section
-        className="relative py-24 md:py-32 lg:pt-10 lg:pb-10"
+        className="relative py-24 md:py-32 lg:pt-10 lg:pb-10 flex "
         style={{
           background: `linear-gradient(135deg, var(--navy) 0%, #162A5E 100%)`,
         }}
@@ -96,15 +109,15 @@ export default function Home() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto mb-28 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl pt-15">
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl text-white mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl text-white mb-6 flex  justify-center"
               style={{ fontWeight: 700, lineHeight: 1.2 }}
             >
               “Giving Resultz. <br /> Changing Lives.”
             </h1>
-            <p className="text-xl text-gray-200 mb-28 ">
+            <p className="text-xl text-gray-200 mb-12 ">
               “Your Trusted, Affordable HR Partner for Growing Organizations”
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -117,21 +130,14 @@ export default function Home() {
                 <ChevronRight className="ml-2" size={20} />
               </Link>
               <Link
-                to="/hr-services"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-md border-2 transition-all hover:bg-white/10"
+                to="/Services"
+                className="inline-flex items-center justify-center px-8 py-4  rounded-md border-2 transition-all hover:bg-white/10"
                 style={{ borderColor: "var(--gold)", color: "white" }}
               >
                 See How We Help Organizations Thrive
               </Link>
             </div>
           </div>
-
-          <Link
-            to="/careers#jobs"
-            className=" text-[var(--gold)] underline py-1   font-bold"
-          >
-            Explore Availabel jobs...
-          </Link>
         </div>
       </section>
 
@@ -219,7 +225,7 @@ export default function Home() {
         </div>
       </section>
 
-       {/* Core Solutions */}
+      {/* Core Solutions */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -240,7 +246,7 @@ export default function Home() {
               return (
                 <Link
                   key={index}
-                  to="/hr-services"
+                  to="/Services"
                   className="relative p-8 rounded-lg border-2 transition-all overflow-hidden group cursor-pointer"
                   style={{
                     borderColor:
@@ -303,8 +309,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-
 
       {/* Who We Are */}
       <section className="py-20 bg-gray-50">
@@ -375,10 +379,6 @@ export default function Home() {
         </div>
       </section>
 
-     
-      
-
-
       {/* sliding testimonial */}
       <section className="py-20 bg-gray-100">
         <div className="max-w-3xl mx-auto px-4 text-center">
@@ -392,8 +392,10 @@ export default function Home() {
           <div className="relative bg-white shadow-lg rounded-xl p-10 transition-all duration-500">
             {/* Profile Image */}
             <div className="flex justify-center mb-6">
+              
               <img
-                src="https://i.pravatar.cc/120?img=5"
+                src={testimonials[testimonialIndex].image}
+                // src="https://i.pravatar.cc/120?img=5"
                 alt="Client"
                 className="w-24 h-24 rounded-full object-cover border-4"
                 style={{ borderColor: "var(--gold)" }}
@@ -552,14 +554,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <Link
-                to="/training"
-                className="inline-flex items-center px-8 py-4 rounded-md transition-all hover:opacity-90 hover:shadow-lg"
-                style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
-              >
-                View Training Programs
-                <ChevronRight className="ml-2" size={20} />
-              </Link>
+             
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img
