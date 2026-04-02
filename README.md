@@ -30,7 +30,6 @@ src/
  │   │   ├── Home.tsx
  │   │   ├── HRServices.tsx
  │   │   ├── Training.tsx
- │   │   ├── Careers.tsx
  │   │   ├── Contact.tsx
  │   │   └── ResourceHub.tsx
  │   │
