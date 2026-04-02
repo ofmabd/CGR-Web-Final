@@ -76,59 +76,86 @@ export default function Contact() {
 
       {/* Contact Section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-12 px-4">
+  <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-3 gap-12">
 
-          {/* Contact Info */}
-          <div>
-            <h2 className="text-2xl mb-6">Contact Information</h2>
+    {/* LEFT: Contact Info */}
+    <div className="lg:col-span-1 space-y-6">
+      <h2 className="text-2xl font-semibold">Contact Information</h2>
 
-            {/* Email */}
-            <div className="mb-6">
-              <Mail />
-              <h3>Email</h3>
-              {CONTACT.emails.map((email, i) => (
-                <a key={i} href={`mailto:${email}`} className="block">
-                  {email}
-                </a>
-              ))}
-            </div>
+      {/* Email */}
+      <div>
+        <h3 className="font-medium">Email</h3>
+        {CONTACT.emails.map((email, i) => (
+          <a
+            key={i}
+            href={`mailto:${email}`}
+            className="block text-gray-600 hover:underline"
+          >
+            {email}
+          </a>
+        ))}
+      </div>
 
-            {/* Phone */}
-            <div className="mb-6">
-              <Phone />
-              <h3>Phone</h3>
-              <a href={CONTACT.phoneLink}>
-                {CONTACT.phone}
-              </a>
-            </div>
+      {/* Phone */}
+      <div>
+        <h3 className="font-medium">Phone</h3>
+        <a href={CONTACT.phoneLink} className="text-gray-600 hover:underline">
+          {CONTACT.phone}
+        </a>
+      </div>
 
-            {/* Address */}
-            <div>
-              <MapPin />
-              <h3>Office</h3>
-              {CONTACT.address.map((line, i) => (
-                <p key={i}>{line}</p>
-              ))}
-            </div>
-          </div>
+      {/* Address */}
+      <div>
+        <h3 className="font-medium">Office</h3>
+        {CONTACT.address.map((line, i) => (
+          <p key={i} className="text-gray-600">
+            {line}
+          </p>
+        ))}
+      </div>
+    </div>
 
-          {/* Form */}
-          <div className="lg:col-span-2">
-            <form onSubmit={handleSubmit} className="space-y-4">
+    {/* RIGHT: Form */}
+    <div className="lg:col-span-2">
+      <form onSubmit={handleSubmit} className="space-y-4">
 
-              <input name="name" value={formData.name} onChange={handleChange} placeholder="Name" />
-              <input name="email" value={formData.email} onChange={handleChange} placeholder="Email" />
-              <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Message" />
-
-              <button type="submit">
-                <Send /> Send
-              </button>
-
-            </form>
-          </div>
-
+        <div className="grid grid-cols-2 gap-4">
+          <input
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Name"
+            className="border p-3 rounded"
+          />
+          <input
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Email"
+            className="border p-3 rounded"
+          />
         </div>
-      </section>
+
+        <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          placeholder="Message"
+          className="border p-3 rounded w-full"
+        />
+
+        <button
+          type="submit"
+          className="bg-black text-white px-6 py-3 rounded flex items-center gap-2"
+        >
+          Send
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
 
       <Footer />
     </div>
