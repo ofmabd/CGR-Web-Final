@@ -28,10 +28,10 @@ export const router = createBrowserRouter([
     path: "/Jobs",
     Component: Jobs,
   },
-  {
-    path: "/resources",
-    Component: ResourceHub,
-  },
+  // {
+  //   path: "/resources",
+  //   Component: ResourceHub,
+  // },
   {
     path: "/Signup",
     Component: Signup,
