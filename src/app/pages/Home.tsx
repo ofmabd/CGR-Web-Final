@@ -28,7 +28,6 @@ export default function Home() {
 
   const testimonials = [
     {
-      
       name: "Olivia Carter",
       role: "HR Director",
       image: user1,
@@ -85,8 +84,7 @@ export default function Home() {
     },
     {
       title: "Internship & Emerging Talent Pipeline",
-      description:
-        "We develop programs that attract and nurture young talent.",
+      description: "We develop programs that attract and nurture young talent.",
       icon: Briefcase,
     },
   ];
@@ -97,46 +95,101 @@ export default function Home() {
 
       {/* Hero Section */}
       <section
-        className="relative py-24 md:py-32 lg:pt-10 lg:pb-10 flex "
+        className="relative w-full min-h-screen flex flex-col justify-center overflow-hidden"
         style={{
-          background: `linear-gradient(135deg, var(--navy) 0%, #162A5E 100%)`,
+          background: "linear-gradient(135deg, #0B1533 0%, #162A5E 100%)",
         }}
       >
-        <div className="absolute inset-0 opacity-10">
-          <img
-            src="https://images.unsplash.com/photo-1758518727707-b023e285b709?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1lZXRpbmclMjBsZWFkZXJzaGlwfGVufDF8fHx8MTc3MjY0MTUxMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt=""
-            className="w-full h-full object-cover"
-          />
+        {/* Background glow */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-600/20 blur-3xl rounded-full">
         </div>
-        <div className="max-w-7xl mx-auto mb-28 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl pt-15">
-            <h1
-              className="text-4xl md:text-5xl lg:text-6xl text-white mb-6 flex  justify-center"
-              style={{ fontWeight: 700, lineHeight: 1.2 }}
-            >
-              “Giving Resultz. <br /> Changing Lives.”
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400/20 blur-3xl rounded-full"></div>
+
+        {/* MAIN CONTENT */}
+        <div className="relative z-10 max-w-7xl mx-2 px-6 lg:px-10 grid lg:grid-cols-2 gap-12 items-center pt-4 pb-16">
+          {/* LEFT SIDE */}
+          <div>
+            <h1 className="text-3xl md:text-5xl lg:text-3xl font-bold leading-tight text-white mb-6">
+              Strategic Human Resources &{" "}
+              <span className="text-yellow-400">Leadership</span>{" "}
+              <span className="text-purple-400">Development Solutions</span>
             </h1>
-            <p className="text-xl text-gray-200 mb-12 ">
-              “Your Trusted, Affordable HR Partner for Growing Organizations”
+
+            <p className="text-lg text-gray-300 mb-8">
+              Building compliant systems. Strengthening leadership. Elevating
+              organizational performance.
             </p>
+
+            {/* BUTTONS */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/Contact"
-                className="inline-flex items-center justify-center  px-8 py-4 rounded-md transition-all hover:opacity-70 hover:shadow-xl"
+                className="inline-flex items-center justify-center  px-4 py-4 rounded-md transition-all hover:opacity-70 hover:shadow-xl"
                 style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
               >
                 Partner With Us Today”
                 <ChevronRight className="ml-2" size={20} />
               </Link>
+
               <Link
-                to="/Services"
-                className="inline-flex items-center justify-center px-8 py-4  rounded-md border-2 transition-all hover:bg-white/10"
-                style={{ borderColor: "var(--gold)", color: "white" }}
+                to="/careers"
+                className="px-4 py-4 rounded-md border border-purple-400 text-white hover:bg-purple-500/20 transition"
               >
-                See How We Help Organizations Thrive
+                See How We Help Organiztions
               </Link>
             </div>
+          </div>
+
+          {/* RIGHT SIDE IMAGE */}
+          <div className="relative">
+            <img
+              src="/src/assets/heroImg.png"
+              alt="Boardroom meeting"
+              className="rounded-xl shadow-2xl"
+            />
+
+            {/* glow accent */}
+            <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-yellow-400/20 blur-3xl rounded-full"></div>
+          </div>
+        </div>
+
+        {/* FEATURE STRIP */}
+        <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-6 pb-10">
+          {[
+            "Compliance & Risk Management",
+            "Supervisor Development",
+            "Performance Optimization",
+            "Strategic Partnerships",
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg px-4 py-3 text-center text-sm text-gray-300"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+
+        {/* STATS BAR */}
+        <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 px-6 pb-16">
+          <div className="text-center">
+            <h3 className="text-3xl font-bold text-yellow-400">95%</h3>
+            <p className="text-gray-400 text-sm">Compliance Rate</p>
+          </div>
+
+          <div className="text-center">
+            <h3 className="text-3xl font-bold text-yellow-400">40% ↑</h3>
+            <p className="text-gray-400 text-sm">Supervisor Readiness</p>
+          </div>
+
+          <div className="text-center">
+            <h3 className="text-3xl font-bold text-yellow-400">100+</h3>
+            <p className="text-gray-400 text-sm">Leaders Trained</p>
+          </div>
+
+          <div className="text-center">
+            <h3 className="text-3xl font-bold text-yellow-400">25+</h3>
+            <p className="text-gray-400 text-sm">Organizations Served</p>
           </div>
         </div>
       </section>
@@ -392,7 +445,6 @@ export default function Home() {
           <div className="relative bg-white shadow-lg rounded-xl p-10 transition-all duration-500">
             {/* Profile Image */}
             <div className="flex justify-center mb-6">
-              
               <img
                 src={testimonials[testimonialIndex].image}
                 // src="https://i.pravatar.cc/120?img=5"
@@ -554,7 +606,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-             
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img

@@ -49,17 +49,21 @@ export default function Signup() {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Navigation />
 
-      <section style={{ backgroundColor: "var(--chart-3)" }} className="flex-grow flex items-center justify-center py-20 px-4">
-        <div className="w-full max-w-2xl bg-white shadow-xl rounded-lg p-10">
+      <section className="flex-grow flex items-center justify-center py-20 px-4
+      bg-[url('/src/assets/background_image.PNG')] bg-cover bg-center min-h-screen flex flex-col 
+      ">
+        <div className="w-full max-w-2xl bg-white shadow-xl rounded-lg p-10
+        bg-[url('/src/assets/background_image.PNG')] bg-cover bg-center
+        ">
           <div className="text-center mb-8">
             <h1
               className="text-3xl mb-2"
-              style={{ color: "var(--navy)", fontWeight: 700 }}
+              style={{ color: "var(--gold)", fontWeight: 700 }}
             >
               Create Account
             </h1>
 
-            <p className="text-gray-600">
+            <p className="text-white">
               Join Cherrie Give Resultz to access career opportunities
             </p>
           </div>
@@ -73,7 +77,7 @@ export default function Signup() {
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* Full Name */}
             <div>
-              <label className="block text-sm mb-1 text-gray-700">
+              <label className="block text-sm mb-1 text-white">
                 Full Name
               </label>
 
@@ -89,15 +93,16 @@ export default function Signup() {
                   required
                   value={formData.fullName}
                   onChange={handleChange}
-                  className="w-full pl-10 pr-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
+                  className="w-full pl-10 pr-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--gold)] bg-white"
                   placeholder="John Doe"
+                  
                 />
               </div>
             </div>
 
             {/* Email */}
             <div>
-              <label className="block text-sm mb-1 text-gray-700">
+              <label className="block text-sm mb-1 text-white">
                 Email Address
               </label>
 
@@ -113,7 +118,7 @@ export default function Signup() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full pl-10 pr-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
+                  className="w-full pl-10 pr-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--gold)] bg-white"
                   placeholder="example@email.com"
                 />
               </div>
@@ -121,21 +126,21 @@ export default function Signup() {
 
             {/* Resume upload */}
             <div className="mb-4">
-              <label className="block text-sm font-medium mb-2">
+              <label className="block text-sm font-medium mb-2 text-white">
                 Upload Resume 
               </label>
               <input 
               type="file"
               accept=".pdf, .doc, .docx"
-              className="block w-full  text-sm text-gray-500 
+              className="block w-40px  text-sm text-gray-400 
               file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-1
-              file:text-sm hover:file:bg-[var(--chart-5)] hover:text-black"
+              file:text-sm hover:file:bg-[var(--chart-5)] hover:text-black hover:file:border-0"
                />
             </div>
 
             {/* Password */}
             <div>
-              <label className="block text-sm mb-1 text-gray-700">
+              <label className="block text-sm mb-1 text-white">
                 Password
               </label>
 
@@ -151,14 +156,14 @@ export default function Signup() {
                   required
                   value={formData.password}
                   onChange={handleChange}
-                  className="w-full pl-10 pr-10 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
+                  className="w-full pl-10 pr-10 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--gold)] bg-white"
                   placeholder="Create password"
                 />
 
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer"
                 >
                   {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                 </button>
@@ -167,7 +172,7 @@ export default function Signup() {
 
             {/* Confirm Password */}
             <div>
-              <label className="block text-sm mb-1 text-gray-700">
+              <label className="block text-sm mb-1 text-white">
                 Confirm Password
               </label>
 
@@ -183,14 +188,14 @@ export default function Signup() {
                   required
                   value={formData.confirmPassword}
                   onChange={handleChange}
-                  className="w-full pl-10 pr-10 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
+                  className="w-full pl-10 pr-10 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--gold)] bg-white"
                   placeholder="Repeat password"
                 />
 
                 <button
                   type="button"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer"
                 >
                   {showConfirmPassword ? (
                     <EyeOff size={18} />
@@ -211,12 +216,12 @@ export default function Signup() {
             </button>
           </form>
 
-          <p className="text-sm text-center text-gray-600 mt-6">
+          <p className="text-sm text-center text-white mt-6">
             Already have an account?{" "}
             <Link
               to="/Login"
               className="font-medium underline"
-              style={{ color: "var(--purple)" }}
+              style={{ color: "var(--gold)" }}
             >
               Sign in
             </Link>
