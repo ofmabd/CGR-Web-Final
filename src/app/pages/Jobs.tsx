@@ -141,38 +141,111 @@ export default function Careers() {
 
       {/* Hero */}
       <section
-        className="py-24 md:py-32"
+  className="relative overflow-hidden py-24 md:py-32 text-white"
+  style={{
+    background: `linear-gradient(135deg, var(--navy) 0%, #162A5E 100%)`,
+  }}
+>
+
+  {/* BACKGROUND IMAGE */}
+  <div className="absolute inset-0 opacity-40 mix-blend-overlay">
+    <img
+      src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
+      alt="Team collaboration"
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+  {/* DARK OVERLAY */}
+  <div className="absolute inset-0 bg-[color:var(--navy)]/80"></div>
+
+  {/* GLOW EFFECTS */}
+  <div className="absolute top-[-80px] left-[-80px] w-72 h-72 bg-purple-500/20 blur-3xl rounded-full"></div>
+  <div className="absolute bottom-[-80px] right-[-80px] w-72 h-72 bg-yellow-400/20 blur-3xl rounded-full"></div>
+
+  {/* FLOATING BADGE */}
+  <div className="absolute top-10 right-10 hidden md:block bg-white/10 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full text-xs">
+    🚀 Now Hiring **
+  </div>
+
+  {/* CONTENT */}
+  <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 text-center">
+
+    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+      Build Your Career With{" "}
+      <span className="bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text text-transparent">
+        Us
+      </span>
+    </h1>
+
+    <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+      Join a team that values growth, innovation, and impact. Discover
+      opportunities designed to help you thrive and succeed.
+    </p>
+
+    {/* SEARCH BAR (cool feature) */}
+    <div className="max-w-xl mx-auto mb-12">
+      <input
+        type="text"
+        placeholder="Search job roles (e.g. HR Manager, Recruiter...)"
+        className="w-full px-5 py-3 rounded-md bg-white/10 border border-white/20 backdrop-blur-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+      />
+    </div>
+
+    {/* QUICK FILTER TAGS */}
+    <div className="flex flex-wrap justify-center gap-3 mb-12">
+      {["Remote", "Full-Time", "Part-Time", "Internship"].map((tag, i) => (
+        <span
+          key={i}
+          className="px-4 py-2 text-sm bg-white/5 border border-white/10 rounded-full backdrop-blur-md hover:bg-white/10 cursor-pointer transition"
+        >
+          {tag}
+        </span>
+      ))}
+    </div>
+
+    {/* CTA BUTTON */}
+    <div className="flex justify-center gap-4 flex-wrap">
+      <a
+        href="#jobs"
+        className="px-8 py-4 rounded-md font-semibold shadow-lg transition-all hover:scale-105"
         style={{
-          background: `linear-gradient(135deg, var(--navy) 0%, #162A5E 100%)`,
+          background: "linear-gradient(90deg, #D4A017, #FFD95A)",
+          color: "var(--navy)",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1
-              className="text-4xl md:text-5xl lg:text-6xl text-white mb-6"
-              style={{ fontWeight: 700, lineHeight: 1.2 }}
-            >
-              “Find Your Next Opportunity”
-            </h1>
-            <p className="text-xl text-gray-200">
-              Join a team committed to excellence, professional development, and
-              making a meaningful impact in the HR profession.
-            </p>
-          </div>
-        </div>
-        <div className="pt-20 text-right">
-            <span className="text-white">New Here? </span>
-            <Link
-              to="/NewHirePortal"
-              className="inline-flex items-center px-6 py-3 rounded-md  transition-all hover:opacity-60 underline"
-              style={{
-                color: "var(--gold)",
-              }}
-            >
-              Join Onboarding Session
-            </Link>
-          </div>
-      </section>
+        View Open Positions →
+      </a>
+
+      <a
+        href="/NewHirePortal"
+        className="px-8 py-4 rounded-md border border-purple-400/50 hover:bg-purple-500/10 transition"
+      >
+        Join Onboarding
+      </a>
+    </div>
+
+  </div>
+
+  {/* BOTTOM STATS */}
+  <div className="relative z-10 mt-16 max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    {[
+      { num: "50+", label: "Open Roles" },
+      { num: "10+", label: "Departments" },
+      { num: "95%", label: "Employee Satisfaction" },
+      { num: "100+", label: "Team Members" },
+    ].map((item, i) => (
+      <div
+        key={i}
+        className="bg-white/5 border border-white/10 backdrop-blur-md rounded-lg py-4"
+      >
+        <h3 className="text-2xl font-bold text-yellow-400">{item.num}</h3>
+        <p className="text-gray-400 text-xs">{item.label}</p>
+      </div>
+    ))}
+  </div>
+
+</section>
 
       {/* Open Positions */}
       <section className="py-20 bg-white" id="jobs">

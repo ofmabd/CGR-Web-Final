@@ -51,39 +51,83 @@ export default function Contact() {
       <Navigation />
 
       {/* Hero */}
-      <section
-        className="py-24 md:py-32"
+     <section
+  className="relative overflow-hidden py-24 md:py-32 text-white text-center"
+  style={{
+    background: `linear-gradient(135deg, var(--navy) 0%, #162A5E 100%)`,
+  }}
+>
+
+  {/* BACKGROUND IMAGE */}
+  <div className="absolute inset-0 opacity-40 mix-blend-overlay">
+    <img
+      src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=80"
+      alt="Customer support team"
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+  {/* DARK OVERLAY */}
+  <div className="absolute inset-0 bg-[color:var(--navy)]/80"></div>
+
+  {/* GLOW EFFECTS */}
+  <div className="absolute top-[-80px] left-[-80px] w-72 h-72 bg-purple-500/20 blur-3xl rounded-full"></div>
+  <div className="absolute bottom-[-80px] right-[-80px] w-72 h-72 bg-yellow-400/20 blur-3xl rounded-full"></div>
+
+  {/* FLOATING BADGE */}
+  <div className="absolute top-10 right-10 hidden md:block bg-white/10 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full text-xs">
+    💬 24/7 Support
+  </div>
+
+  {/* CONTENT */}
+  <div className="relative z-10 max-w-4xl mx-auto px-6 flex flex-col items-center">
+
+    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+      Get In{" "}
+      <span className="bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text text-transparent">
+        Touch
+      </span>
+    </h1>
+
+    <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl">
+      We're here to support your HR needs. Reach out for consultations,
+      support requests, or general inquiries.
+    </p>
+
+    {/* DIVIDER */}
+    <div className="w-24 h-1 bg-[var(--gold)] mb-10 rounded-full"></div>
+
+    {/* QUICK CONTACT OPTIONS */}
+    <div className="flex flex-wrap justify-center gap-4 mb-12">
+      {["📞 Call Us", "✉️ Email Support", "💼 Book Consultation"].map((item, i) => (
+        <span
+          key={i}
+          className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm backdrop-blur-md hover:bg-white/10 transition"
+        >
+          {item}
+        </span>
+      ))}
+    </div>
+
+    {/* CTA */}
+    <div className="flex flex-col sm:flex-row items-center gap-4">
+      <span className="text-gray-300">New Here?</span>
+
+      <a
+        href="/NewHirePortal"
+        className="inline-flex items-center px-6 py-3 rounded-md font-medium transition-all hover:scale-105"
         style={{
-          background: `linear-gradient(135deg, var(--navy) 0%, #162A5E 100%)`,
+          background: "linear-gradient(90deg, #D4A017, #FFD95A)",
+          color: "var(--navy)",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1
-              className="text-4xl md:text-5xl lg:text-6xl text-white mb-6"
-              style={{ fontWeight: 700, lineHeight: 1.2 }}
-            >
-              Get In Touch
-            </h1>
-            <p className="text-xl text-gray-200">
-              We're here to support your HR needs. Reach out for consultations,
-              support requests, or general inquiries.
-            </p>
-          </div>
-          <div className="pt-20 text-right">
-            <span className="text-white">New Here? </span>
-            <Link
-              to="/NewHirePortal"
-              className="inline-flex items-center px-6 py-3 rounded-md  transition-all hover:opacity-60 underline"
-              style={{
-                color: "var(--gold)",
-              }}
-            >
-              Join Onboarding Session
-            </Link>
-          </div>
-        </div>
-      </section>
+        Join Onboarding Session →
+      </a>
+    </div>
+
+  </div>
+
+</section>
 
       {/* Contact Content */}
       <section className="py-20">

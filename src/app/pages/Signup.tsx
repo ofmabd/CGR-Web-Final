@@ -134,7 +134,7 @@ export default function Signup() {
               accept=".pdf, .doc, .docx"
               className="block w-40px  text-sm text-gray-400 
               file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-1
-              file:text-sm hover:file:bg-[var(--chart-5)] hover:text-black hover:file:border-0"
+              file:text-sm hover:file:bg-[var(--chart-5)] hover:text-white hover:file:border-0 cursor-pointer"
                />
             </div>
 
