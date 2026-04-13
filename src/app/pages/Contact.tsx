@@ -51,83 +51,81 @@ export default function Contact() {
       <Navigation />
 
       {/* Hero */}
-     <section
-  className="relative overflow-hidden py-24 md:py-32 text-white text-center"
-  style={{
-    background: `linear-gradient(135deg, var(--navy) 0%, #162A5E 100%)`,
-  }}
->
-
-  {/* BACKGROUND IMAGE */}
-  <div className="absolute inset-0 opacity-40 mix-blend-overlay">
-    <img
-      src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=80"
-      alt="Customer support team"
-      className="w-full h-full object-cover"
-    />
-  </div>
-
-  {/* DARK OVERLAY */}
-  <div className="absolute inset-0 bg-[color:var(--navy)]/80"></div>
-
-  {/* GLOW EFFECTS */}
-  <div className="absolute top-[-80px] left-[-80px] w-72 h-72 bg-purple-500/20 blur-3xl rounded-full"></div>
-  <div className="absolute bottom-[-80px] right-[-80px] w-72 h-72 bg-yellow-400/20 blur-3xl rounded-full"></div>
-
-  {/* FLOATING BADGE */}
-  <div className="absolute top-10 right-10 hidden md:block bg-white/10 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full text-xs">
-    💬 24/7 Support
-  </div>
-
-  {/* CONTENT */}
-  <div className="relative z-10 max-w-4xl mx-auto px-6 flex flex-col items-center">
-
-    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-      Get In{" "}
-      <span className="bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text text-transparent">
-        Touch
-      </span>
-    </h1>
-
-    <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl">
-      We're here to support your HR needs. Reach out for consultations,
-      support requests, or general inquiries.
-    </p>
-
-    {/* DIVIDER */}
-    <div className="w-24 h-1 bg-[var(--gold)] mb-10 rounded-full"></div>
-
-    {/* QUICK CONTACT OPTIONS */}
-    <div className="flex flex-wrap justify-center gap-4 mb-12">
-      {["📞 Call Us", "✉️ Email Support", "💼 Book Consultation"].map((item, i) => (
-        <span
-          key={i}
-          className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm backdrop-blur-md hover:bg-white/10 transition"
-        >
-          {item}
-        </span>
-      ))}
-    </div>
-
-    {/* CTA */}
-    <div className="flex flex-col sm:flex-row items-center gap-4">
-      <span className="text-gray-300">New Here?</span>
-
-      <a
-        href="/NewHirePortal"
-        className="inline-flex items-center px-6 py-3 rounded-md font-medium transition-all hover:scale-105"
+      <section
+        className="relative overflow-hidden py-24 md:py-32 text-white text-center"
         style={{
-          background: "linear-gradient(90deg, #D4A017, #FFD95A)",
-          color: "var(--navy)",
+          background: `linear-gradient(135deg, var(--navy) 0%, #162A5E 100%)`,
         }}
       >
-        Join Onboarding Session →
-      </a>
-    </div>
+        {/* BACKGROUND IMAGE */}
+        <div className="absolute inset-0 opacity-40 mix-blend-overlay">
+          <img
+            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=80"
+            alt="Customer support team"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-  </div>
+        {/* DARK OVERLAY */}
+        <div className="absolute inset-0 bg-[color:var(--navy)]/80"></div>
 
-</section>
+        {/* GLOW EFFECTS */}
+        <div className="absolute top-[-80px] left-[-80px] w-72 h-72 bg-purple-500/20 blur-3xl rounded-full"></div>
+        <div className="absolute bottom-[-80px] right-[-80px] w-72 h-72 bg-yellow-400/20 blur-3xl rounded-full"></div>
+
+        {/* FLOATING BADGE */}
+        <div className="absolute top-10 right-10 hidden md:block bg-white/10 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full text-xs">
+          💬 24/7 Support
+        </div>
+
+        {/* CONTENT */}
+        <div className="relative z-10 max-w-4xl mx-auto px-6 flex flex-col items-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            Get In{" "}
+            <span className="bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text text-transparent">
+              Touch
+            </span>
+          </h1>
+
+          <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl">
+            We're here to support your HR needs. Reach out for consultations,
+            support requests, or general inquiries.
+          </p>
+
+          {/* DIVIDER */}
+          <div className="w-24 h-1 bg-[var(--gold)] mb-10 rounded-full"></div>
+
+          {/* QUICK CONTACT OPTIONS */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {["📞 Call Us", "✉️ Email Support", "💼 Book Consultation"].map(
+              (item, i) => (
+                <span
+                  key={i}
+                  className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm backdrop-blur-md hover:bg-white/10 transition"
+                >
+                  {item}
+                </span>
+              ),
+            )}
+          </div>
+
+          {/* CTA */}
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <span className="text-gray-300">New Here?</span>
+
+            <a
+              href="/NewHirePortal"
+              className="inline-flex items-center px-6 py-3 rounded-md font-medium transition-all hover:scale-105"
+              style={{
+                background: "linear-gradient(90deg, #D4A017, #FFD95A)",
+                color: "var(--navy)",
+              }}
+            >
+              Join Onboarding Session →
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Contact Content */}
       <section className="py-20">
@@ -152,11 +150,9 @@ export default function Contact() {
                       Email
                     </h3>
                     <p className="text-gray-600">
-                      contact@cherriegiveresultz.com
+                      admin@cherriegiveresultz.com
                     </p>
-                    <p className="text-gray-600">
-                      hr-support@cherriegiveresultz.com
-                    </p>
+                    <p className="text-gray-600">hr@cherriegiveresultz.com</p>
                   </div>
                 </div>
 
@@ -175,6 +171,52 @@ export default function Contact() {
                     <p className="text-sm text-gray-500">
                       Mon-Fri, 9am-5pm EST
                     </p>
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    display: "flex",
+                    gap: "15px",
+                    marginTop: "20px",
+                    fontFamily: "sans-serif",
+                  }}
+                >
+                  {/* Icon Box */}
+                  <div
+                    style={{
+                      background: "#6a40a2",
+                      minWidth: "45px",
+                      height: "45px",
+                      borderRadius: "8px",
+                      display: "grid",
+                      placeItems: "center",
+                      fontSize: "20px",
+                    }}
+                  >
+                    🆔
+                  </div>
+
+                  {/* Text Section */}
+                  <div>
+                    <b
+                      style={{
+                        color: "#00214d",
+                        fontSize: "18px",
+                        display: "block",
+                      }}
+                    >
+                      EIN
+                    </b>
+                    <div
+                      style={{
+                        color: "#555",
+                        marginTop: "5px",
+                        fontSize: "16px",
+                      }}
+                    >
+                      39-2971068
+                    </div>
                   </div>
                 </div>
 

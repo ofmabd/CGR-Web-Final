@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
-// import image6 from '../assets/images/ImgE.png';
-// import image1 from '../assets/image1.jpg';
+import heroImg from "../../assets/heroImg.png"
+
 import {
   Shield,
   Users,
@@ -101,8 +101,7 @@ export default function Home() {
         }}
       >
         {/* Background glow */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-600/20 blur-3xl rounded-full">
-        </div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-600/20 blur-3xl rounded-full"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400/20 blur-3xl rounded-full"></div>
 
         {/* MAIN CONTENT */}
@@ -116,8 +115,7 @@ export default function Home() {
             </h1>
 
             <p className="text-lg text-gray-300 mb-8">
-              Building compliant systems. Strengthening leadership. Elevating
-              organizational performance.
+              A non profit organization dedicated to helping businesses build stronger, more effective workplaces through structured HR systems and leadership development.
             </p>
 
             {/* BUTTONS */}
@@ -143,7 +141,7 @@ export default function Home() {
           {/* RIGHT SIDE IMAGE */}
           <div className="relative">
             <img
-              src="/src/assets/heroImg.png"
+              src={heroImg}
               alt="Boardroom meeting"
               className="rounded-xl shadow-2xl"
             />
