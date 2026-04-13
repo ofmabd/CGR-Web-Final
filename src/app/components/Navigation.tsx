@@ -9,7 +9,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 // Import the logo image
-import logo from "../../assets/logo-icon.png";
+import logo from "../../assets/logo.png"
 
 export function Navigation() {
 
@@ -22,7 +22,6 @@ export function Navigation() {
     { name: "About", path: "/About" },
     { name: "Services", path: "/Services" },
     // { name: "Training & Development", path: "/training" },
-    { name: "Jobs", path: "/Jobs" },
     { name: "Contact", path: "/contact" },
     { name: "Resource", path: "/resources" },
     { name: "Login", path: "/Login" },
