@@ -119,9 +119,21 @@ const About: React.FC = () => {
         <p className="text-white mb-6">
           Partner with us to create impactful HR solutions that drive results.
         </p>
-        <button className="bg-[#D4A017] text-[#001F3F] px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">
+        <div className="flex justify-center gap-4 mt-6 flex-wrap">
+          <a
+            href="mailto:sales@cherriegiveresultz.com?subject=Consultation Request"
+            className="bg-[#D4A017] text-[#001F3F] px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition"
+          >
           Get Started
-        </button>
+          </a>
+
+          <a
+           href="mailto:sales@cherriegiveresultz.com?subject=Donation Inquiry"
+           className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition"
+          >
+            Donate
+          </a>
+        </div>
       </section>
     </div>
   );
