@@ -99,9 +99,9 @@ export default function Home() {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400/20 blur-3xl rounded-full"></div>
 
         {/* MAIN CONTENT */}
-        <div className="relative z-10 max-w-7xl mx-2 px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center pt-4 pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-[1.3fr_1fr] gap-16 items-center pt-8 pb-20">
           {/* LEFT SIDE */}
-          <div>
+          <div className="max-w-2xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-6">
               Strategic Human Resources &{" "}
               <span className="text-yellow-400">Leadership</span>{" "}
@@ -112,7 +112,7 @@ export default function Home() {
               Building compliant systems. Strengthening leadership. Elevating
               organizational performance.
             </p>
-            <p className="text-sm text-gray-400 mb-6">
+            <p className="text-sm text-gray-400 mb-8">
               Proud 501(c)(3) Non-Profit Organization
             </p>
 
@@ -120,7 +120,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/Contact"
-                className="inline-flex items-center justify-center  px-4 py-4 rounded-md transition-all hover:opacity-70 hover:shadow-xl"
+                className="inline-flex items-center justify-center px-6 py-4 text-lg rounded-md transition-all hover:opacity-70 hover:shadow-xl"
                 style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
               >
                 Partner With Us Today
@@ -129,7 +129,7 @@ export default function Home() {
 
               <a
                 href="mailto:sales@cherriegiveresultz.com?subject=Donation Inquiry"
-                className="px-4 py-4 rounded-md bg-green-500 text-white hover:opacity-90 transition text-center"
+                className="px-6 py-4 text-lg rounded-md bg-green-500 text-white hover:opacity-90 transition text-center"
               >
                 Donate
               </a>
@@ -140,7 +140,7 @@ export default function Home() {
           <div className="relative flex justify-center md:justify-end">
             <img
                 src={heroImg}
-                className="w-full max-w-lg md:max-w-xl lg:max-w-2xl rounded-xl shadow-2xl"
+                className="w-full max-w-xl md:max-w-2xl lg:max-w-3xl rounded-xl shadow-2xl"
                 alt="Boardroom meeting"
             />
 
