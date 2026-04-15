@@ -286,8 +286,8 @@ export default function HRServices() {
                       </div>
 
                       <div className="pt-4">
-                        <Link
-                          to="/contact"
+                        <a
+                          href="mailto:sales@cherriegiveresultz.com?subject=Consultation Request"
                           className="inline-flex items-center px-6 py-3 rounded-md transition-all hover:opacity-90"
                           style={{
                             backgroundColor: "var(--gold)",
@@ -295,7 +295,7 @@ export default function HRServices() {
                           }}
                         >
                           Request Consultation
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   )}
@@ -306,14 +306,14 @@ export default function HRServices() {
         </div>
       </section>
 
-      <Link
-        to="/training"
-        className="inline-flex w-110 items-center justify-center my-4 ml-6 px-8 py-4  transition-all hover:opacity-70 hover:shadow-xl"
+      <a
+        href="mailto:training@cherriegiveresultz.com?subject=Training Inquiry"
+        className="inline-flex w-110 items-center justify-center my-4 ml-6 px-8 py-4 transition-all hover:opacity-70 hover:shadow-xl"
         style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
       >
-        Goto Training and Development Services
+        Training & Leadership Development
         <ChevronRight className="ml-2" size={20} />
-      </Link>
+      </a>
 
       {/* CTA Section */}
       <section className="py-20" style={{ backgroundColor: "var(--navy)" }}>
@@ -333,13 +333,13 @@ export default function HRServices() {
             Schedule a consultation to discuss your specific needs and learn how
             we can support your organization.
           </p>
-          <Link
-            to="/contact"
+          <a
+            href="mailto:sales@cherriegiveresultz.com?subject=Consultation Request"
             className="inline-flex items-center px-8 py-4 rounded-md transition-all hover:opacity-90 hover:shadow-xl"
             style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
           >
             Schedule Consultation
-          </Link>
+          </a>
         </div>
       </section>
 
