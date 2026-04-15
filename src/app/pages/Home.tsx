@@ -18,8 +18,7 @@ import {
 import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
 import { useState, useEffect } from "react";
-
-// import user3 from "../assets/image3.jpg";
+import heroImg from "../../assets/heroImg.png";
 
 export default function Home() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -113,6 +112,9 @@ export default function Home() {
               Building compliant systems. Strengthening leadership. Elevating
               organizational performance.
             </p>
+            <p className="text-sm text-gray-400 mb-6">
+              Proud 501(c)(3) Non-Profit Organization
+            </p>
 
             {/* BUTTONS */}
             <div className="flex flex-col sm:flex-row gap-4">
@@ -121,23 +123,23 @@ export default function Home() {
                 className="inline-flex items-center justify-center  px-4 py-4 rounded-md transition-all hover:opacity-70 hover:shadow-xl"
                 style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
               >
-                Partner With Us Today”
+                Partner With Us Today
                 <ChevronRight className="ml-2" size={20} />
               </Link>
 
-              <Link
-                to="/careers"
-                className="px-4 py-4 rounded-md border border-purple-400 text-white hover:bg-purple-500/20 transition"
+              <a
+                href="mailto:sales@cherriegiveresultz.com?subject=Donation Inquiry"
+                className="px-4 py-4 rounded-md bg-green-500 text-white hover:opacity-90 transition text-center"
               >
-                See How We Help Organiztions
-              </Link>
+                Donate
+              </a>
             </div>
           </div>
 
           {/* RIGHT SIDE IMAGE */}
           <div className="relative">
             <img
-              src="/src/assets/heroImg.png"
+              src={heroImg}
               alt="Boardroom meeting"
               className="rounded-xl shadow-2xl"
             />
