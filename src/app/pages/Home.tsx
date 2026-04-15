@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 // import image6 from '../assets/images/ImgE.png';
 // import image1 from '../assets/image1.jpg';
+
 import {
   Shield,
   Users,
@@ -18,9 +19,6 @@ import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
 import { useState, useEffect } from "react";
 
-import user1 from "../../assets/user1.jpg";
-import user2 from "../../assets/user2.jpg";
-import user3 from "../../assets/user3.jpg";
 // import user3 from "../assets/image3.jpg";
 
 export default function Home() {
@@ -30,25 +28,21 @@ export default function Home() {
     {
       name: "Olivia Carter",
       role: "HR Director",
-      image: user1,
       text: "Working with Cherrie Give Resultz delivered real, measurable impact on our hiring process. Within just a few months, we achieved a 42% reduction in time-to-hire, allowing us to secure top talent faster and stay ahead of our competitors.",
     },
     {
       name: "Michael Daniels",
       role: "Operations Manager",
-      image: user2,
       text: "Their leadership training program transformed how our supervisors manage teams and resolve workplace challenges.",
     },
     {
       name: "Aisha Bello",
       role: "Talent Development Lead",
-      image: user3,
       text: "Partnering with Cherrie Give Resultz transformed how we manage performance. Their systems and guidance helped us streamline evaluations and improve accountability across teams. Within a short time, we saw a 30% increase in overall employee productivity. The clarity they brought to our processes made a lasting difference.",
     },
     {
       name: "Veronica Sterlin",
       role: "Head of operations",
-      image: user2,
       text: "Professional, strategic, and practical. Their HR frameworks brought clarity and structure to our organization.",
     },
   ];
@@ -444,14 +438,8 @@ export default function Home() {
 
           <div className="relative bg-white shadow-lg rounded-xl p-10 transition-all duration-500">
             {/* Profile Image */}
-            <div className="flex justify-center mb-6">
-              <img
-                src={testimonials[testimonialIndex].image}
-                // src="https://i.pravatar.cc/120?img=5"
-                alt="Client"
-                className="w-24 h-24 rounded-full object-cover border-4"
-                style={{ borderColor: "var(--gold)" }}
-              />
+            <div className="mb-4 text-sm text-gray-500">
+              Verified Client Feedback
             </div>
 
             {/* Testimonial Text */}
