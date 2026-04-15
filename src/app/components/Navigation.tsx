@@ -9,7 +9,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 // Import the logo image
-import logo from "../../assets/logo-icon.png";
+import logo from "../../assets/logo.png";
 
 export function Navigation() {
 

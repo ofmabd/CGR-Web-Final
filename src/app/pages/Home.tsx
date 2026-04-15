@@ -99,10 +99,10 @@ export default function Home() {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400/20 blur-3xl rounded-full"></div>
 
         {/* MAIN CONTENT */}
-        <div className="relative z-10 max-w-7xl mx-2 px-6 lg:px-10 grid lg:grid-cols-2 gap-12 items-center pt-4 pb-16">
+        <div className="relative z-10 max-w-7xl mx-2 px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center pt-4 pb-16">
           {/* LEFT SIDE */}
           <div>
-            <h1 className="text-3xl md:text-5xl lg:text-3xl font-bold leading-tight text-white mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-6">
               Strategic Human Resources &{" "}
               <span className="text-yellow-400">Leadership</span>{" "}
               <span className="text-purple-400">Development Solutions</span>
@@ -137,11 +137,11 @@ export default function Home() {
           </div>
 
           {/* RIGHT SIDE IMAGE */}
-          <div className="relative">
+          <div className="relative flex justify-center md:justify-end">
             <img
-              src={heroImg}
-              alt="Boardroom meeting"
-              className="rounded-xl shadow-2xl"
+                src={heroImg}
+                className="w-full max-w-lg md:max-w-xl lg:max-w-2xl rounded-xl shadow-2xl"
+                alt="Boardroom meeting"
             />
 
             {/* glow accent */}
@@ -192,7 +192,7 @@ export default function Home() {
 
       {/* Why Work With Us */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <h2
               className="text-3xl md:text-4xl mb-4"
