@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
-import heroImg from "../../assets/heroImg.png"
+// import image6 from '../assets/images/ImgE.png';
+// import image1 from '../assets/image1.jpg';
 
 import {
   Shield,
@@ -17,11 +18,7 @@ import {
 import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
 import { useState, useEffect } from "react";
-
-import user1 from "../../assets/user1.jpg";
-import user2 from "../../assets/user2.jpg";
-import user3 from "../../assets/user3.jpg";
-// import user3 from "../assets/image3.jpg";
+import heroImg from "../../assets/heroImg.png";
 
 export default function Home() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -30,25 +27,21 @@ export default function Home() {
     {
       name: "Olivia Carter",
       role: "HR Director",
-      image: user1,
       text: "Working with Cherrie Give Resultz delivered real, measurable impact on our hiring process. Within just a few months, we achieved a 42% reduction in time-to-hire, allowing us to secure top talent faster and stay ahead of our competitors.",
     },
     {
       name: "Michael Daniels",
       role: "Operations Manager",
-      image: user2,
       text: "Their leadership training program transformed how our supervisors manage teams and resolve workplace challenges.",
     },
     {
       name: "Aisha Bello",
       role: "Talent Development Lead",
-      image: user3,
       text: "Partnering with Cherrie Give Resultz transformed how we manage performance. Their systems and guidance helped us streamline evaluations and improve accountability across teams. Within a short time, we saw a 30% increase in overall employee productivity. The clarity they brought to our processes made a lasting difference.",
     },
     {
       name: "Veronica Sterlin",
       role: "Head of operations",
-      image: user2,
       text: "Professional, strategic, and practical. Their HR frameworks brought clarity and structure to our organization.",
     },
   ];
@@ -105,45 +98,53 @@ export default function Home() {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400/20 blur-3xl rounded-full"></div>
 
         {/* MAIN CONTENT */}
-        <div className="relative z-10 max-w-7xl mx-2 px-6 lg:px-10 grid lg:grid-cols-2 gap-12 items-center pt-4 pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-[1.3fr_1fr] gap-16 items-center pt-8 pb-20">
           {/* LEFT SIDE */}
-          <div>
-            <h1 className="text-3xl md:text-5xl lg:text-3xl font-bold leading-tight text-white mb-6">
+          <div className="max-w-2xl">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-6">
               Strategic Human Resources &{" "}
               <span className="text-yellow-400">Leadership</span>{" "}
               <span className="text-purple-400">Development Solutions</span>
             </h1>
 
             <p className="text-lg text-gray-300 mb-8">
-              A non profit organization dedicated to helping businesses build stronger, more effective workplaces through structured HR systems and leadership development.
+              A non profit organization dedicated to helping businesses build
+              stronger, more effective workplaces through structured HR systems
+              and leadership development.
+            </p>
+            <p className="text-sm text-gray-400 mb-8">
+              Proud 501(c)(3) Non-Profit Organization
+            </p>
+            <p className="text-sm text-gray-400 mb-8">
+              Proud 501(c)(3) Non-Profit Organization
             </p>
 
             {/* BUTTONS */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/Contact"
-                className="inline-flex items-center justify-center  px-4 py-4 rounded-md transition-all hover:opacity-70 hover:shadow-xl"
+                className="inline-flex items-center justify-center px-6 py-4 text-lg rounded-md transition-all hover:opacity-70 hover:shadow-xl"
                 style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
               >
-                Partner With Us Today”
+                Partner With Us Today
                 <ChevronRight className="ml-2" size={20} />
               </Link>
 
-              <Link
-                to="/careers"
-                className="px-4 py-4 rounded-md border border-purple-400 text-white hover:bg-purple-500/20 transition"
+              <a
+                href="mailto:sales@cherriegiveresultz.com?subject=Donation Inquiry"
+                className="px-6 py-4 text-lg rounded-md bg-green-500 text-white hover:opacity-90 transition text-center"
               >
-                See How We Help Organiztions
-              </Link>
+                Donate
+              </a>
             </div>
           </div>
 
           {/* RIGHT SIDE IMAGE */}
-          <div className="relative">
+          <div className="relative flex justify-center md:justify-end">
             <img
-              src={heroImg}
-              alt="Boardroom meeting"
-              className="rounded-xl shadow-2xl"
+                src={heroImg}
+                className="w-full max-w-xl md:max-w-2xl lg:max-w-3xl rounded-xl shadow-2xl"
+                alt="Boardroom meeting"
             />
 
             {/* glow accent */}
@@ -194,7 +195,7 @@ export default function Home() {
 
       {/* Why Work With Us */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <h2
               className="text-3xl md:text-4xl mb-4"
@@ -442,14 +443,8 @@ export default function Home() {
 
           <div className="relative bg-white shadow-lg rounded-xl p-10 transition-all duration-500">
             {/* Profile Image */}
-            <div className="flex justify-center mb-6">
-              <img
-                src={testimonials[testimonialIndex].image}
-                // src="https://i.pravatar.cc/120?img=5"
-                alt="Client"
-                className="w-24 h-24 rounded-full object-cover border-4"
-                style={{ borderColor: "var(--gold)" }}
-              />
+            <div className="mb-4 text-sm text-gray-500">
+              Verified Client Feedback
             </div>
 
             {/* Testimonial Text */}

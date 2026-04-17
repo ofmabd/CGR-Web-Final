@@ -197,6 +197,11 @@ export default function Contact() {
       {/* CTA */}
       
     </div>
+    {/* EIN */}
+    {/* <div>
+      <h3 className="font-medium">EIN</h3>
+      <p className="text-gray-600">{CONTACT.ein}</p>
+    </div> */}
 
     {/* RIGHT FORM */}
     <div className="lg:col-span-2">
