@@ -114,12 +114,7 @@ export default function Contact() {
         ))}
       </div>
     </div>
-    {/* EIN */}
-    <div>
-      <h3 className="font-medium">EIN</h3>
-      <p className="text-gray-600">{CONTACT.ein}</p>
-    </div>
-
+    
     {/* RIGHT: Form */}
     <div className="lg:col-span-2">
       <form onSubmit={handleSubmit} className="space-y-4">

@@ -11,6 +11,9 @@ export function Footer() {
             <h3 className="text-xl mb-4" style={{ color: "var(--gold)" }}>
               Cherrie Give Resultz
             </h3>
+            <p className="text-sm text-gray-400 mb-2">
+              EIN: 39-2971068
+            </p>
             <p className="text-gray-300 mb-4">
               Strategic HR solutions designed to strengthen leadership, protect organizations, and drive measurable results.
             </p>
