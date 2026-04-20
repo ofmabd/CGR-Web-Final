@@ -6,7 +6,6 @@ import { Footer } from "../components/Footer";
 const About: React.FC = () => {
   return (
     <div className="bg-white min-h-screen">
-      {/* Navigation Bar */}
       <Navigation />
 
       {/* Hero Section */}
@@ -58,8 +57,8 @@ const About: React.FC = () => {
     <div className="flex flex-col md:flex-row items-center justify-center gap-4">
       <span>New Here?</span>
 
-      <a
-        href="/NewHirePortal"
+      <Link
+        to="/NewHirePortal"
         className="inline-flex items-center px-6 py-3 rounded-md font-medium transition-all hover:scale-105"
         style={{
           background: "linear-gradient(90deg, #D4A017, #FFD95A)",
@@ -67,7 +66,7 @@ const About: React.FC = () => {
         }}
       >
         Join Onboarding Session →
-      </a>
+      </Link>
     </div>
 
   </div>

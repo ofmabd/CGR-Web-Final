@@ -114,7 +114,7 @@ export default function NewHirePortal() {
           {/* CTA */}
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
-              href="#start"
+              href="#boardingTask"
               className="px-8 py-4 rounded-md font-semibold transition-all hover:scale-105"
               style={{
                 background: "linear-gradient(90deg, #D4A017, #FFD95A)",
@@ -124,19 +124,19 @@ export default function NewHirePortal() {
               Start Onboarding →
             </a>
 
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="px-8 py-4 rounded-md border border-purple-400/50 hover:bg-purple-500/10 transition"
             >
               Need Help?
-            </a>
+            </Link>
           </div>
         </div>
       </section>
 
       <div className="max-w-7xl mx-auto px-6 py-10 bg-gray-100">
         {/* 🔥 PROGRESS BAR */}
-        <div className="mb-8 bg-white p-6 rounded-xl shadow">
+        <div className="mb-8 bg-white p-6 rounded-xl shadow" id="boardingTask">
           <div className="flex justify-between mb-2">
             <span className="font-medium text-[var(--navy)]">
               Onboarding Progress
@@ -174,7 +174,7 @@ export default function NewHirePortal() {
 
         {/* TASKS */}
         {(activeTab === "all" || activeTab === "tasks") && (
-          <div className="bg-white p-8 rounded-xl shadow mb-6">
+          <div className="bg-white p-8 rounded-xl shadow mb-6 ">
             <h2 className="text-2xl font-semibold mb-4 text-[var(--navy)]">
               Onboarding Tasks
             </h2>
@@ -290,6 +290,20 @@ export default function NewHirePortal() {
             </div>
           </div>
         )}
+      </div>
+
+      <div className="ml-auto mr-20 mb-1">
+        <span className="text-black mr-2">Onboarding process completed?</span>
+        <Link
+          to="/Jobs"
+          className="inline-flex items-center px-6 py-3 rounded-md font-medium transition-all hover:scale-105"
+          style={{
+            background: "linear-gradient(90deg, #D4A017, #FFD95A)",
+            color: "var(--navy)",
+          }}
+        >
+          View Available Jobs →
+        </Link>
       </div>
 
       <Footer />

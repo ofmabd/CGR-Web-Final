@@ -101,7 +101,7 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-[1.3fr_1fr] gap-16 items-center pt-8 pb-20">
           {/* LEFT SIDE */}
           <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-4xl font-bold leading-tight text-white mb-6">
               Strategic Human Resources &{" "}
               <span className="text-yellow-400">Leadership</span>{" "}
               <span className="text-purple-400">Development Solutions</span>
@@ -113,10 +113,7 @@ export default function Home() {
               and leadership development.
             </p>
             <p className="text-sm text-gray-400 mb-8">
-              Proud 501(c)(3) Non-Profit Organization
-            </p>
-            <p className="text-sm text-gray-400 mb-8">
-              Proud 501(c)(3) Non-Profit Organization
+              Non-Profit Organization
             </p>
 
             {/* BUTTONS */}
@@ -132,7 +129,7 @@ export default function Home() {
 
               <a
                 href="mailto:sales@cherriegiveresultz.com?subject=Donation Inquiry"
-                className="px-6 py-4 text-lg rounded-md bg-green-500 text-white hover:opacity-90 transition text-center"
+                className="px-6 py-4 text-lg rounded-md bg-green-500 text-white hover:opacity-90 transition text-center w-45"
               >
                 Donate
               </a>

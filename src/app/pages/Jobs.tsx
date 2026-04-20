@@ -217,12 +217,12 @@ export default function Careers() {
         View Open Positions →
       </a>
 
-      <a
-        href="/NewHirePortal"
+      <Link
+        to="/NewHirePortal"
         className="px-8 py-4 rounded-md border border-purple-400/50 hover:bg-purple-500/10 transition"
       >
         Join Onboarding
-      </a>
+      </Link>
     </div>
 
   </div>
