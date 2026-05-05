@@ -142,7 +142,7 @@ export default function Login() {
               </label>
 
               <Link
-                to="/forgot-password"
+                to="/ForgetPassword"
                 className="underline"
                 style={{ color: "var(--secondary)" }}
               >
