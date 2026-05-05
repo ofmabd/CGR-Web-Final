@@ -30,56 +30,59 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-xl mb-4" style={{ color: "var(--gold)" }}>
-              Quick Links
-            </h3>
-            <div className="flex flex-col gap-2">
-              <Link to="/" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
-                Home
-              </Link>
-              <Link to="/hr-services" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
-                HR Services
-              </Link>
-              <Link to="/training" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
-                Training & Development
-              </Link>
-              <Link to="/careers" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
-                Careers
-              </Link>
-              <Link to="/resources" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
-                Resource Hub
-              </Link>
-            </div>
-          </div>
-
-          {/* HR Support */}
-          <div>
-            <h3 className="text-xl mb-4" style={{ color: "var(--gold)" }}>
-              HR Support
-            </h3>
-            <div className="flex flex-col gap-2">
-              <Link to="/contact" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
-                Contact Us
-              </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
-                HR Support Request
-              </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
-                Schedule Consultation
-              </Link>
-              <Link to="/resources" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
-                Privacy Policy
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t border-gray-700 pt-8 text-center text-gray-300">
-          <p>&copy; 2026 Cherrie Give Resultz. All rights reserved.</p>
+      {/* Quick Links */}
+      <div>
+        <h3 className="text-xl mb-4" style={{ color: "var(--gold)" }}>
+          Quick Links
+        </h3>
+        <div className="flex flex-col gap-2">
+          <Link to="/" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
+            Home
+          </Link>
+          <Link to="/hr-services" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
+            HR Services
+          </Link>
+          <Link to="/training" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
+            Training & Development
+          </Link>
+          <Link to="/careers" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
+            Careers
+          </Link>
+          <Link to="/resources" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
+            Resource Hub
+          </Link>
         </div>
       </div>
-    </footer>
+
+      {/* HR Support */}
+      <div>
+        <h3 className="text-xl mb-4" style={{ color: "var(--gold)" }}>
+          HR Support
+        </h3>
+        <div className="flex flex-col gap-2">
+          <Link to="/contact" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
+            Contact Us
+          </Link>
+          <Link to="/contact" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
+            HR Support Request
+          </Link>
+          <Link to="/contact" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
+            Schedule Consultation
+          </Link>
+          <Link to="/resources" className="text-gray-300 hover:text-[var(--gold)] transition-colors">
+            Privacy Policy
+          </Link>
+        </div>
+      </div>
+
+    </div>
+
+    {/* Bottom */}
+    <div className="border-t border-white/10 pt-8 text-center text-gray-400">
+      <p>&copy; 2026 Cherrie Give Resultz. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer>
   );
 }

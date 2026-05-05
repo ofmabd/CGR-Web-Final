@@ -1,33 +1,76 @@
 import React from "react";
 import { Navigation } from "../components/Navigation";
 import { Link } from "react-router";
+import { Footer } from "../components/Footer";
 
 const About: React.FC = () => {
   return (
     <div className="bg-white min-h-screen">
-      {/* Navigation Bar */}
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#001F3F] to-[#002b5c] text-white py-20 px-6 md:px-12 lg:px-20 ">
-        <h1 className="text-3xl md:text-6xl font-bold mb-4 text-center">About Us</h1>
-        <p className="text-[#D4A017] text-lg max-w-2xl text-center mx-auto">
-          Giving Resultz. Changing Lives.
-        </p>
+      <section className="relative overflow-hidden bg-gradient-to-r from-[#001F3F] to-[#002b5c] text-white py-24 px-6 md:px-12 lg:px-20">
 
-        <div className="pt-20 text-right">
-            <span className="text-white ">New Here? </span>
-            <Link
-              to="/NewHirePortal"
-              className="inline-flex items-center px-6 py-3 rounded-md  transition-all hover:opacity-60 underline"
-              style={{
-                color: "var(--gold)",
-              }}
-            >
-              Join Onboarding Session
-            </Link>
-          </div>
-      </section>
+  {/* BACKGROUND IMAGE */}
+  <div className="absolute inset-0 opacity-40 mix-blend-overlay">
+    <img
+      src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80"
+      alt="Team meeting"
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+  {/* DARK OVERLAY (keeps text readable) */}
+  <div className="absolute inset-0 bg-[#001F3F]/80"></div>
+
+  {/* Glow Effects */}
+  <div className="absolute top-[-80px] left-[-80px] w-72 h-72 bg-purple-500/20 blur-3xl rounded-full"></div>
+  <div className="absolute bottom-[-80px] right-[-80px] w-72 h-72 bg-yellow-400/20 blur-3xl rounded-full"></div>
+
+  {/* CONTENT */}
+  <div className="relative z-10 text-center max-w-4xl mx-auto">
+    
+    <h1 className="text-3xl md:text-6xl font-bold mb-6 leading-tight">
+      About <span className="text-[#D4A017]">Us</span>
+    </h1>
+
+    <p className="text-[#D4A017] text-lg md:text-xl max-w-2xl mx-auto mb-10">
+      Giving Resultz. Changing Lives.
+    </p>
+
+    {/* Divider */}
+    <div className="w-24 h-1 bg-[#D4A017] mx-auto mb-10 rounded-full"></div>
+
+    {/* FEATURES */}
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm mb-12">
+      {["Trusted HR Partner", "Leadership Growth", "Proven Results", "Client Focused"].map((item, i) => (
+        <div
+          key={i}
+          className="bg-white/5 border border-white/10 backdrop-blur-md rounded-lg py-3 px-2"
+        >
+          {item}
+        </div>
+      ))}
+    </div>
+
+    {/* CTA */}
+    <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+      <span>New Here?</span>
+
+      <Link
+        to="/NewHirePortal"
+        className="inline-flex items-center px-6 py-3 rounded-md font-medium transition-all hover:scale-105"
+        style={{
+          background: "linear-gradient(90deg, #D4A017, #FFD95A)",
+          color: "#001F3F",
+        }}
+      >
+        Join Onboarding Session →
+      </Link>
+    </div>
+
+  </div>
+</section>
 
       {/* Intro */}
       <section className="py-16 px-6 md:px-12 lg:px-20">
@@ -135,6 +178,7 @@ const About: React.FC = () => {
           </a>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

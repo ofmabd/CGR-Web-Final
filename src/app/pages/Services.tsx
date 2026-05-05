@@ -126,35 +126,72 @@ export default function HRServices() {
 
       {/* Hero */}
       <section
-        className="py-24 md:py-32"
+        className="relative overflow-hidden py-24 md:py-15"
         style={{
           background: `linear-gradient(135deg, var(--navy) 0%, #162A5E 100%)`,
         }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1
-              className="text-4xl md:text-5xl lg:text-6xl text-white mb-6"
-              style={{ fontWeight: 700, lineHeight: 1.2 }}
-            >
-              Comprehensive HR Services
+       >
+        {/* BACKGROUND IMAGE */}
+        <div className="absolute inset-0 opacity-40 mix-blend-overlay">
+          <img
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80"
+            alt="Business team strategy"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* DARK OVERLAY */}
+        <div className="absolute inset-0 bg-[color:var(--navy)]/80"></div>
+
+        {/* GLOW EFFECTS */}
+        <div className="absolute top-[-80px] left-[-80px] w-72 h-72 bg-purple-500/20 blur-3xl rounded-full"></div>
+        <div className="absolute bottom-[-80px] right-[-80px] w-72 h-72 bg-yellow-400/20 blur-3xl rounded-full"></div>
+
+        {/* CONTENT */}
+        <div className="relative z-10 max-w-7xl text-center mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl text-center mx-auto">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-white mb-3 font-bold leading-tight">
+              Comprehensive{" "}
+              <span className="text-[var(--gold)]">HR Services</span>
             </h1>
-            <p className="text-xl text-gray-200">
+
+            <p className="text-xl text-gray-200 mb-10">
               Strategic solutions designed to strengthen your organization,
               protect your interests, and drive sustainable performance.
             </p>
+
+            {/* DIVIDER */}
+            <div className="w-24 h-1 bg-[var(--gold)] mb-10 rounded-full text-center mx-auto"></div>
+
+            {/* MINI FEATURES */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm mb-12">
+              {["Compliance", "Advisory", "Training", "Performance"].map(
+                (item, i) => (
+                  <div
+                    key={i}
+                    className="bg-white/5 border border-white/10 backdrop-blur-md rounded-lg py-3 px-3 text-center text-gray-300"
+                  >
+                    {item}
+                  </div>
+                ),
+              )}
+            </div>
           </div>
         </div>
-        <div className="pt-20 text-right">
-          <span className="text-white">New Here? </span>
+
+        {/* CTA RIGHT */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-1 text-right">
+          <span className="text-white mr-2">New Here?</span>
+
           <Link
             to="/NewHirePortal"
-            className="inline-flex items-center px-6 py-3 rounded-md  transition-all hover:opacity-60 underline"
+            className="inline-flex items-center px-6 py-3 rounded-md font-medium transition-all hover:scale-105"
             style={{
-              color: "var(--gold)",
+              background: "linear-gradient(90deg, #D4A017, #FFD95A)",
+              color: "var(--navy)",
             }}
           >
-            Join Onboarding Session
+            Join Onboarding Session →
           </Link>
         </div>
       </section>

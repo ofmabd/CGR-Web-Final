@@ -94,26 +94,26 @@ export default function Home() {
         }}
       >
         {/* Background glow */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-600/20 blur-3xl rounded-full">
-        </div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-600/20 blur-3xl rounded-full"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400/20 blur-3xl rounded-full"></div>
 
         {/* MAIN CONTENT */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-[1.3fr_1fr] gap-16 items-center pt-8 pb-20">
           {/* LEFT SIDE */}
           <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-4xl font-bold leading-tight text-white mb-6">
               Strategic Human Resources &{" "}
               <span className="text-yellow-400">Leadership</span>{" "}
               <span className="text-purple-400">Development Solutions</span>
             </h1>
 
             <p className="text-lg text-gray-300 mb-8">
-              Building compliant systems. Strengthening leadership. Elevating
-              organizational performance.
+              A non profit organization dedicated to helping businesses build
+              stronger, more effective workplaces through structured HR systems
+              and leadership development.
             </p>
             <p className="text-sm text-gray-400 mb-8">
-              Proud 501(c)(3) Non-Profit Organization
+              Non-Profit Organization
             </p>
 
             {/* BUTTONS */}
@@ -129,7 +129,7 @@ export default function Home() {
 
               <a
                 href="mailto:sales@cherriegiveresultz.com?subject=Donation Inquiry"
-                className="px-6 py-4 text-lg rounded-md bg-green-500 text-white hover:opacity-90 transition text-center"
+                className="px-6 py-4 text-lg rounded-md bg-green-500 text-white hover:opacity-90 transition text-center w-45"
               >
                 Donate
               </a>
