@@ -343,14 +343,16 @@ export default function HRServices() {
         </div>
       </section>
 
-      <a
+      <div className="flex justify-center">
+        <a
         href="mailto:training@cherriegiveresultz.com?subject=Training Inquiry"
-        className="inline-flex w-110 items-center justify-center my-4 ml-6 px-8 py-4 transition-all hover:opacity-70 hover:shadow-xl"
+        className="inline-flex  items-center justify-center my-4 px-8 py-4 transition-all hover:opacity-70 hover:shadow-xl"
         style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
       >
         Training & Leadership Development
         <ChevronRight className="ml-2" size={20} />
       </a>
+      </div>
 
       {/* CTA Section */}
       <section className="py-20" style={{ backgroundColor: "var(--navy)" }}>
