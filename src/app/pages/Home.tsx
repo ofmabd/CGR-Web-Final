@@ -101,7 +101,7 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-[1.3fr_1fr] gap-16 items-center pt-8 pb-20">
           {/* LEFT SIDE */}
           <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl lg:text-5xl  font-bold leading-tight text-white mb-6">
+            <h1 className="text-3xl md:text-5xl lg:text-5xl  font-bold leading-tight text-white mb-6">
               Strategic Human Resources &{" "}
               <span className="text-yellow-400">Leadership</span>{" "}
               <span className="text-purple-400">Development Solutions</span>
@@ -117,7 +117,7 @@ export default function Home() {
             </p>
 
             {/* BUTTONS */}
-            <div className="flex flex-row sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/Contact"
                 className="inline-flex items-center justify-center px-6 py-4 text-lg rounded-md transition-all  hover:opacity-70 hover:shadow-xl"
@@ -129,7 +129,7 @@ export default function Home() {
 
               <a
                 href="mailto:sales@apexmission.org?subject=Donation Inquiry"
-                className="px-18 py-4 text-lg rounded-md bg-green-500 text-white hover:opacity-90 transition-all text-center "
+                className="px-6 py-4 text-lg rounded-md bg-green-500 text-white hover:opacity-90 transition-all text-center "
               >
                 Donate
               </a>
