@@ -64,7 +64,7 @@ export default function Signup() {
             </h1>
 
             <p className="text-white">
-              Join Cherrie Give Resultz to access career opportunities
+              Join Apex Workforce & Talent foundation to access career opportunities
             </p>
           </div>
 

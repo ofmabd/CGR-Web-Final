@@ -172,7 +172,7 @@ export default function ResourceHub() {
                 placeholder="Search resources..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 border-2 border-white placeholder-white text-white"
+                className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 border-2 border-white placeholder-white"
               />
             </div>
           </div>

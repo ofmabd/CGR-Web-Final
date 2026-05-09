@@ -27,7 +27,7 @@ export default function Home() {
     {
       name: "Olivia Carter",
       role: "HR Director",
-      text: "Working with Cherrie Give Resultz delivered real, measurable impact on our hiring process. Within just a few months, we achieved a 42% reduction in time-to-hire, allowing us to secure top talent faster and stay ahead of our competitors.",
+      text: "Working with Apex Workforce & Talent foundation delivered real, measurable impact on our hiring process. Within just a few months, we achieved a 42% reduction in time-to-hire, allowing us to secure top talent faster and stay ahead of our competitors.",
     },
     {
       name: "Michael Daniels",
@@ -37,7 +37,7 @@ export default function Home() {
     {
       name: "Aisha Bello",
       role: "Talent Development Lead",
-      text: "Partnering with Cherrie Give Resultz transformed how we manage performance. Their systems and guidance helped us streamline evaluations and improve accountability across teams. Within a short time, we saw a 30% increase in overall employee productivity. The clarity they brought to our processes made a lasting difference.",
+      text: "Partnering with Apex Workforce & Talent foundation transformed how we manage performance. Their systems and guidance helped us streamline evaluations and improve accountability across teams. Within a short time, we saw a 30% increase in overall employee productivity. The clarity they brought to our processes made a lasting difference.",
     },
     {
       name: "Veronica Sterlin",
@@ -101,7 +101,7 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-[1.3fr_1fr] gap-16 items-center pt-8 pb-20">
           {/* LEFT SIDE */}
           <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl lg:text-4xl font-bold leading-tight text-white mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-5xl  font-bold leading-tight text-white mb-6">
               Strategic Human Resources &{" "}
               <span className="text-yellow-400">Leadership</span>{" "}
               <span className="text-purple-400">Development Solutions</span>
@@ -117,10 +117,10 @@ export default function Home() {
             </p>
 
             {/* BUTTONS */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-row sm:flex-row gap-4">
               <Link
                 to="/Contact"
-                className="inline-flex items-center justify-center px-6 py-4 text-lg rounded-md transition-all hover:opacity-70 hover:shadow-xl"
+                className="inline-flex items-center justify-center px-6 py-4 text-lg rounded-md transition-all  hover:opacity-70 hover:shadow-xl"
                 style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
               >
                 Partner With Us Today
@@ -128,8 +128,8 @@ export default function Home() {
               </Link>
 
               <a
-                href="mailto:sales@cherriegiveresultz.com?subject=Donation Inquiry"
-                className="px-6 py-4 text-lg rounded-md bg-green-500 text-white hover:opacity-90 transition text-center w-45"
+                href="mailto:sales@apexmission.org?subject=Donation Inquiry"
+                className="px-18 py-4 text-lg rounded-md bg-green-500 text-white hover:opacity-90 transition-all text-center "
               >
                 Donate
               </a>
@@ -139,9 +139,9 @@ export default function Home() {
           {/* RIGHT SIDE IMAGE */}
           <div className="relative flex justify-center md:justify-end">
             <img
-                src={heroImg}
-                className="w-full max-w-xl md:max-w-2xl lg:max-w-3xl rounded-xl shadow-2xl"
-                alt="Boardroom meeting"
+              src={heroImg}
+              className="w-full max-w-xl md:max-w-2xl lg:max-w-3xl rounded-xl shadow-2xl"
+              alt="Boardroom meeting"
             />
 
             {/* glow accent */}
@@ -370,7 +370,7 @@ export default function Home() {
               Your Strategic HR Partner
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Cherrie Give Resultz provides structured, compliance-driven human
+              Apex Workforce & Talent foundation provides structured, compliance-driven human
               resource solutions designed to strengthen leadership, improve
               workforce performance, and protect organizational integrity.
             </p>
@@ -616,7 +616,7 @@ export default function Home() {
               className="text-3xl md:text-4xl mb-4 text-white"
               style={{ fontWeight: 700 }}
             >
-              Why Choose Cherrie Give Resultz
+              Why Choose Apex Workforce & Talent foundation?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We do more than provide HR support — we build structured systems
@@ -779,7 +779,7 @@ export default function Home() {
                 className="text-3xl md:text-4xl mb-6"
                 style={{ color: "var(--navy)", fontWeight: 700 }}
               >
-                Grow With Cherrie Give Resultz
+                Grow With apex Workforce & Talent foundation
               </h2>
               <p className="text-lg text-gray-700 mb-8">
                 We believe in developing talent from within. Our leadership

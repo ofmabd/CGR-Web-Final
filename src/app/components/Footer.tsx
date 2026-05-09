@@ -9,7 +9,7 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-xl mb-4" style={{ color: "var(--gold)" }}>
-              Cherrie Give Resultz
+              Apex Workforce & Talent foundation
             </h3>
             <p className="text-sm text-gray-400 mb-2">
               EIN: 39-2971068
@@ -79,7 +79,7 @@ export function Footer() {
 
     {/* Bottom */}
     <div className="border-t border-white/10 pt-8 text-center text-gray-400">
-      <p>&copy; 2026 Cherrie Give Resultz. All rights reserved.</p>
+      <p>&copy; 2026 Apex Workforce & Talent foundation. All rights reserved.</p>
     </div>
 
   </div>

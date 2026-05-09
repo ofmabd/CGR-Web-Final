@@ -23,7 +23,7 @@ const ForgetPassword: React.FC = () => {
         
         {/* Header Section */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-[#f2b824] mb-2">Forget Password</h2>
+          <h2 className="text-3xl font-bold text-[#f2b824] mb-2">Forgot Password?</h2>
           {isSubmitted ? (
             <p className="text-green-400 text-sm animate-pulse">
               Check your inbox! If an account exists, a link is on its way.

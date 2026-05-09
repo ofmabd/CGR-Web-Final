@@ -137,7 +137,7 @@ export default function Contact() {
 
       {/* RESPONSE TIME */}
       <div className="inline-block px-4 py-2 bg-green-100 text-green-700 text-sm rounded-full">
-        ⚡ Responds within 24 hours
+         Responds within 24 hours
       </div>
 
       {/* EMAIL */}

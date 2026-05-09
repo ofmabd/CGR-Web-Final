@@ -35,7 +35,7 @@ const About: React.FC = () => {
     </h1>
 
     <p className="text-[#D4A017] text-lg md:text-xl max-w-2xl mx-auto mb-10">
-      Giving Resultz. Changing Lives.
+      Empowering talent and streangthing workforces through education, professional development, and nonprofit HR excellence.
     </p>
 
     {/* Divider */}
@@ -76,7 +76,7 @@ const About: React.FC = () => {
       <section className="py-16 px-6 md:px-12 lg:px-20">
         <div className="max-w-5xl mx-auto text-center">
           <p className="text-gray-600 text-lg leading-relaxed">
-            Cherrie Give Resultz is a mission-driven HR consulting firm
+            Apex Workforce & Talent foundation is a mission-driven HR consulting firm
             dedicated to helping organizations build stronger teams, improve
             workforce performance, and achieve measurable results. We combine
             strategy, innovation, and human-centered solutions to support
@@ -164,14 +164,14 @@ const About: React.FC = () => {
         </p>
         <div className="flex justify-center gap-4 mt-6 flex-wrap">
           <a
-            href="mailto:sales@cherriegiveresultz.com?subject=Consultation Request"
+            href="mailto:sales@apexmission.org?subject=Consultation Request"
             className="bg-[#D4A017] text-[#001F3F] px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition"
           >
           Get Started
           </a>
 
           <a
-           href="mailto:sales@cherriegiveresultz.com?subject=Donation Inquiry"
+           href="mailto:sales@apexmission.org?subject=Donation Inquiry"
            className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition"
           >
             Donate

@@ -9,7 +9,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 // Import the logo image
-import logo from "../../assets/logo.png";
+import logo from "../../assets/apex2.png";
 
 export function Navigation() {
 
@@ -31,54 +31,57 @@ export function Navigation() {
     // Main navbar container
     <nav
       style={{ backgroundColor: "var(--navy)" }}
-      className="sticky top-0 z-50 shadow-md"
+      className="sticky top-0 z-50 shadow-md w-full overflow-x-hidden"
     >
 
       {/* Container keeps the navbar aligned with the page content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Navbar row */}
-        <div className="flex justify-between items-center h-18">
+        <div className="flex justify-between items-center min-h-[72px] py-2">
+          
 
           {/* ================= LOGO + BRAND ================= */}
           {/* Clicking logo returns user to homepage */}
-          <Link to="/" className="flex items-center gap-3 min-w-max">
+          <Link to="/" className="flex items-center gap-3 flex-1 min-w-0">
            
 
             {/* Company logo */}
             <img
               src={logo}
-              alt="CGR Logo"
-              className="h-12 w-auto"
+              alt="Apex Mission Logo"
+             className="h-16 w-auto drop-shadow-md brightness-110 flex-none"
+              
+              
             />
 
             {/* Brand text */}
-            <div className="flex flex-col">
+           <div className="flex flex-col min-w-0">
 
-              {/* Main company name */}
-              <span className="brand-text whitespace-nowrap">
-                Cherrie Give Resultz
-              </span>
+  {/* Main company name */}
+  <span className="brand-text text-sm sm:text-lg md:text-xl leading-tight break-words">
+    Apex Workforce & Talent Foundation
+  </span>
 
-              {/* Subtitle / tagline */}
-              <span className="text-[var(--gold)] text-xs sm:text-sm tracking-wider">
-                STRATEGIC HR SOLUTIONS
-              </span>
+  {/* Subtitle / tagline */}
+  <span className="text-[var(--gold)] text-[10px] sm:text-xs md:text-sm tracking-wide break-words leading-tight">
+    Powered by Apex Talent Initiative Academy
+  </span>
 
-            </div>
+</div>
           </Link>
 
 
           {/* ================= DESKTOP NAVIGATION ================= */}
           {/* Hidden on smaller screens */}
-          <div className="hidden lg:flex items-center gap-4 ml-12">
+          <div className="hidden lg:flex items-center gap-4 ml-8 flex-shrink-0">
 
             {/* Map through navLinks array to generate links */}
               {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className="flex items-center justify-center text-white text-sm font-medium tracking-wide px-4 py-2 rounded-md hover:bg-white/10 hover:text-[var(--gold)] transition-all duration-300 text-center"
+                className="flex items-center justify-center text-white text-sm font-medium tracking-wide px-4 py-2 rounded-md hover:bg-white/10 hover:text-[var(--gold)] transition-all duration-300 text-center whitespace-nowrap"
                >
                 {link.name}
               </Link>
@@ -93,7 +96,6 @@ export function Navigation() {
               Schedule a Consultation
             </Link> */}
           </div>
-
 
           {/* ================= MOBILE MENU BUTTON ================= */}
           {/* Only visible on small screens */}
