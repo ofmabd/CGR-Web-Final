@@ -190,7 +190,7 @@ export default function Contact() {
         </div>
         <div>
           <h3 className="font-medium mb-1">EIN</h3>
-          <p className="text-gray-600">39-2971068</p>
+          <p className="text-gray-600">42-1985493</p>
         </div>
       </div>
 
@@ -213,14 +213,14 @@ export default function Contact() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Name"
-            className="border p-3 rounded focus:outline-none focus:ring-1 focus:ring-gray-400 transition"
+            className="border-1 border-gray-400 p-3 rounded w-full h-40 resize-none focus:outline-none focus:ring-2 focus:ring-[var(--gold)] focus:border-[var(--gold)] transition"
           />
           <input
             name="email"
             value={formData.email}
             onChange={handleChange}
             placeholder="Email"
-            className="border p-3 rounded focus:outline-none focus:ring-1 focus:ring-gray-400 transition"
+            className="border-1 border-gray-400 p-3 rounded w-full h-40 resize-none focus:outline-none focus:ring-2 focus:ring-[var(--gold)] focus:border-[var(--gold)] transition"
           />
         </div>
 
@@ -230,7 +230,8 @@ export default function Contact() {
           value={formData.message}
           onChange={handleChange}
           placeholder="Message"
-          className="border p-3 rounded w-full h-40 resize-none focus:outline-none focus:ring-1 focus:ring-gray-400 transition"
+         className="border-1 border-gray-400 p-3 rounded w-full h-40 resize-none focus:outline-none focus:ring-2 focus:ring-[var(--gold)] focus:border-[var(--gold)] transition"
+
         />
 
         {/* SIMPLE BUTTON ✅ */}
